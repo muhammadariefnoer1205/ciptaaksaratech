@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kontak &amp; Konsultasi Proyek | CIPTA AKSARA TECH</title>
+<!-- Google Fonts: Inter & Plus Jakarta Sans -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS with forms and container queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-low": "#151c28",
+            "on-error": "#690005",
+            "on-tertiary": "#233514",
+            "on-secondary-container": "#adb8d6",
+            "secondary": "#bbc6e5",
+            "tertiary": "#daf2c1",
+            "secondary-fixed-dim": "#bbc6e5",
+            "inverse-on-surface": "#2a313e",
+            "secondary-fixed": "#d8e2ff",
+            "surface-variant": "#2e3542",
+            "on-tertiary-fixed": "#0f2003",
+            "surface-container-lowest": "#070e1a",
+            "inverse-primary": "#4a662f",
+            "tertiary-container": "#bed5a6",
+            "tertiary-fixed": "#d2eaba",
+            "on-primary": "#1e3704",
+            "surface-container": "#19202c",
+            "surface-tint": "#b0d18d",
+            "on-primary-container": "#435f28",
+            "surface-container-high": "#232a37",
+            "primary-container": "#b7d894",
+            "background": "#0c1320",
+            "on-tertiary-fixed-variant": "#394c29",
+            "on-error-container": "#ffdad6",
+            "primary-fixed-dim": "#b0d18d",
+            "error": "#ffb4ab",
+            "surface-container-highest": "#2e3542",
+            "primary": "#d3f5ae",
+            "surface-bright": "#323947",
+            "on-surface-variant": "#c4c8b9",
+            "on-primary-fixed-variant": "#344e19",
+            "error-container": "#93000a",
+            "on-background": "#dce2f4",
+            "outline": "#8e9285",
+            "secondary-container": "#3e4962",
+            "primary-fixed": "#cceda7",
+            "on-primary-fixed": "#0e2000",
+            "surface-dim": "#0c1320",
+            "on-secondary-fixed-variant": "#3c4760",
+            "on-secondary-fixed": "#101b32",
+            "outline-variant": "#44483d",
+            "inverse-surface": "#dce2f4",
+            "on-surface": "#dce2f4",
+            "on-secondary": "#253048",
+            "on-tertiary-container": "#495d38",
+            "surface": "#0c1320",
+            "tertiary-fixed-dim": "#b7cea0"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-md": "1rem",
+            "space-xs": "0.25rem",
+            "margin": "3rem",
+            "space-lg": "1.5rem",
+            "gutter-mobile": "1rem",
+            "gutter": "1.5rem",
+            "space-sm": "0.5rem",
+            "margin-mobile": "1.25rem",
+            "space-xl": "2.5rem"
+          },
+          "fontFamily": {
+            "body-sm": ["Inter"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "display-hero-mobile": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "body-md": ["Inter"],
+            "display-hero": ["Plus Jakarta Sans"],
+            "body-lg": ["Inter"]
+          },
+          "fontSize": {
+            "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }],
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "display-hero": ["56px", { "lineHeight": "68px", "letterSpacing": "-0.03em", "fontWeight": "800" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .custom-glass {
+      background: rgba(21, 28, 40, 0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+    .halo-glow {
+      box-shadow: 0 0 28px rgba(183, 216, 148, 0.18);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen selection:bg-primary-container selection:text-on-primary">
+<!-- =========================================================================
+       1. TOP APP BAR (Shared Component: TopNavBar with active 'Kontak')
+       ========================================================================= -->
+<header class="docked full-width top-0 sticky z-50 bg-surface/85 backdrop-blur-md border-b border-outline-variant/30 shadow-sm">
+<div class="flex justify-between items-center w-full px-6 lg:px-12 max-w-7xl mx-auto h-20">
+<!-- Brand Logo / Product Name -->
+<a class="flex items-center gap-3 group" href="#">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high border border-primary/30 flex items-center justify-center transition-transform group-hover:scale-105 duration-200">
+<span class="w-3 h-3 rounded-full bg-primary-container shadow-[0_0_10px_#b7d894]"></span>
+</div>
+<span class="text-headline-sm font-headline-sm font-bold tracking-tight text-on-surface">
+          CIPTA AKSARA TECH
+        </span>
+</a>
+<!-- Desktop Nav Links -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant font-label-lg hover:text-primary transition-colors duration-200" href="#">Beranda</a>
+<a class="text-on-surface-variant font-label-lg hover:text-primary transition-colors duration-200" href="#">Layanan</a>
+<a class="text-on-surface-variant font-label-lg hover:text-primary transition-colors duration-200" href="#">Portofolio</a>
+<a class="text-on-surface-variant font-label-lg hover:text-primary transition-colors duration-200" href="#">Paket Harga</a>
+<a class="text-on-surface-variant font-label-lg hover:text-primary transition-colors duration-200" href="#">Tentang</a>
+<!-- Active Link: Kontak -->
+<a class="text-primary font-label-lg font-semibold border-b-2 border-primary pb-1" href="#">Kontak</a>
+</nav>
+<!-- Trailing Action -->
+<div class="flex items-center gap-4">
+<button class="hidden sm:flex items-center gap-2 bg-surface-container-high border border-outline-variant/50 hover:border-primary/40 text-on-surface px-3 py-2 rounded-lg text-label-md font-label-md transition-colors" title="Chat dengan Tim Konsultan">
+<span class="material-symbols-outlined text-[18px] text-primary" data-icon="chat">chat</span>
+<span class="hidden lg:inline text-on-surface-variant font-body-sm">Bantuan Cepat</span>
+</button>
+<a class="bg-primary-container hover:bg-tertiary text-on-primary font-label-lg font-semibold px-5 py-2.5 rounded-lg transition-all duration-200 shadow-sm active:scale-[0.98] flex items-center gap-2" href="#form-konsultasi">
+<span>Konsultasi Gratis</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</header>
+<!-- =========================================================================
+       2. COMPACT HERO SECTION
+       ========================================================================= -->
+<section class="relative pt-10 pb-12 px-6 lg:px-12 max-w-7xl mx-auto overflow-hidden">
+<!-- Ambient glow decorative gradient -->
+<div class="absolute top-0 right-1/4 w-96 h-96 bg-primary-container/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute top-1/3 left-10 w-72 h-72 bg-secondary-container/20 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="flex flex-col items-start gap-4">
+<!-- Breadcrumb -->
+<nav class="flex items-center gap-2 text-body-sm font-body-sm text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">Beranda</a>
+<span class="text-outline-variant">/</span>
+<span class="text-primary font-medium">Kontak &amp; Konsultasi</span>
+</nav>
+<!-- Badge / Chip -->
+<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary-container/15 border border-primary-container/30 text-primary text-label-md font-label-md">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+<span>Respon Cepat &lt; 15 Menit Jam Kerja • Non-Disclosure Agreement (NDA) Tersedia</span>
+</div>
+<!-- Main Headline -->
+<h1 class="text-headline-lg font-headline-lg text-on-surface max-w-4xl tracking-tight mt-1">
+        Mari Diskusikan Arsitektur Digital &amp; Proyek Perangkat Lunak Anda
+      </h1>
+<!-- Subheadline -->
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-3xl leading-relaxed">
+        Ceritakan tantangan bisnis dan visi teknis Anda. Tim Principal Engineer dan UI/UX Solution Architect kami siap memberikan estimasi, rencana arsitektur (RAB), dan konsultasi teknis tanpa komitmen awal.
+      </p>
+<!-- Trust Highlights Bar -->
+<div class="w-full grid grid-cols-1 md:grid-cols-3 gap-4 mt-4 pt-4 border-t border-outline-variant/30">
+<div class="flex items-center gap-3 p-3 rounded-xl bg-surface-container-low/60 border border-outline-variant/20">
+<div class="w-9 h-9 rounded-lg bg-primary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[20px]" data-icon="lock" style="font-variation-settings: 'FILL' 1;">lock</span>
+</div>
+<div>
+<p class="text-label-md font-label-md text-on-surface">Garansi Kerahasiaan Ide (NDA)</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Legalitas &amp; privasi 100% terjaga</p>
+</div>
+</div>
+<div class="flex items-center gap-3 p-3 rounded-xl bg-surface-container-low/60 border border-outline-variant/20">
+<div class="w-9 h-9 rounded-lg bg-primary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[20px]" data-icon="description" style="font-variation-settings: 'FILL' 1;">description</span>
+</div>
+<div>
+<p class="text-label-md font-label-md text-on-surface">Proposal Teknis &amp; RAB dlm 1x24 Jam</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Transparan, terinci &amp; realistis</p>
+</div>
+</div>
+<div class="flex items-center gap-3 p-3 rounded-xl bg-surface-container-low/60 border border-outline-variant/20">
+<div class="w-9 h-9 rounded-lg bg-primary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[20px]" data-icon="terminal" style="font-variation-settings: 'FILL' 1;">terminal</span>
+</div>
+<div>
+<p class="text-label-md font-label-md text-on-surface">Senior Engineer (Bukan Sales)</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Diskusi langsung teknis arsitektur</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- =========================================================================
+       3. TWO-COLUMN MAIN CONTENT LAYOUT
+       ========================================================================= -->
+<main class="px-6 lg:px-12 max-w-7xl mx-auto pb-20">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+<!-- =====================================================================
+           LEFT COLUMN: Project Inquiry Form (7 Cols)
+           ===================================================================== -->
+<section class="lg:col-span-7 custom-glass border border-outline-variant/30 rounded-2xl p-6 sm:p-8 shadow-2xl relative" id="form-konsultasi">
+<!-- Form Header -->
+<div class="border-b border-outline-variant/30 pb-5 mb-6">
+<div class="flex items-center justify-between">
+<h2 class="text-headline-sm font-headline-sm text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">assignment</span>
+              Formulir Eksplorasi Proyek
+            </h2>
+<span class="px-2.5 py-1 rounded bg-surface-container-high border border-outline-variant/40 text-[11px] font-label-sm text-secondary">EST. 3 MENIT</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1.5">
+            Lengkapi informasi di bawah agar kami dapat mempersiapkan studi teknis awal.
+          </p>
+</div>
+<!-- Success Toast Preview (Demonstrated as instructed) -->
+<div class="mb-6 p-4 rounded-xl bg-surface-container-low border border-primary/40 flex items-start gap-3 bg-gradient-to-r from-surface-container-low to-surface-container">
+<div class="w-7 h-7 rounded-full bg-primary-container flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-on-primary text-[18px]">check</span>
+</div>
+<div class="flex-1">
+<p class="text-label-md font-label-md text-primary font-semibold">Permintaan Terkirim! (Simulasi State Berhasil)</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-0.5 leading-snug">
+              Tim Senior Engineer kami akan menganalisis kebutuhan Anda dan mengirimkan roadmap teknis dalam kurun waktu 1x24 jam kerja.
+            </p>
+</div>
+</div>
+<!-- Inquiry Form -->
+<form action="#" class="space-y-5" method="POST" onsubmit="event.preventDefault();">
+<!-- Row 1: Nama & Email -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block text-label-md font-label-md text-on-surface mb-2" for="full-name">
+                Nama Lengkap <span class="text-primary">*</span>
+</label>
+<input class="w-full bg-surface-container-lowest/80 border border-outline-variant/40 rounded-xl px-4 py-3 text-body-md font-body-md text-on-surface placeholder:text-on-surface-variant/40 focus:outline-none focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 transition-all duration-200" id="full-name" name="name" placeholder="cth. Dimas Arya Suryo" required="" type="text"/>
+</div>
+<!-- Email Field with Validation Error Demonstration -->
+<div>
+<div class="flex items-center justify-between mb-2">
+<label class="text-label-md font-label-md text-on-surface" for="work-email">
+                  Email Perusahaan / Profesional <span class="text-primary">*</span>
+</label>
+</div>
+<input class="w-full bg-surface-container-lowest/80 border border-error/60 rounded-xl px-4 py-3 text-body-md font-body-md text-on-surface placeholder:text-on-surface-variant/40 focus:outline-none focus:border-error focus:ring-2 focus:ring-error/20 transition-all duration-200" id="work-email" name="email" placeholder="cth. dimas@perusahaan.co.id" required="" type="email" value="dimas@perusahaan"/>
+<!-- Inline micro-copy error note demonstration -->
+<div class="flex items-center gap-1.5 mt-1.5 text-error text-[12px] font-body-sm">
+<span class="material-symbols-outlined text-[15px]" data-icon="error">error</span>
+<span>Harap masukkan email kerja yang valid (domain perusahaan disarankan).</span>
+</div>
+</div>
+</div>
+<!-- Row 2: WhatsApp & Target Waktu -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block text-label-md font-label-md text-on-surface mb-2" for="whatsapp">
+                Nomor WhatsApp / Telepon <span class="text-primary">*</span>
+</label>
+<div class="relative">
+<span class="absolute left-4 top-3 text-body-md font-body-md text-on-surface-variant">+62</span>
+<input class="w-full pl-14 bg-surface-container-lowest/80 border border-outline-variant/40 rounded-xl px-4 py-3 text-body-md font-body-md text-on-surface placeholder:text-on-surface-variant/40 focus:outline-none focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 transition-all duration-200" id="whatsapp" name="phone" placeholder="812-3456-7890" required="" type="tel"/>
+</div>
+</div>
+<div>
+<label class="block text-label-md font-label-md text-on-surface mb-2" for="timeline">
+                Target Waktu Peluncuran / Deadline
+              </label>
+<input class="w-full bg-surface-container-lowest/80 border border-outline-variant/40 rounded-xl px-4 py-3 text-body-md font-body-md text-on-surface placeholder:text-on-surface-variant/40 focus:outline-none focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 transition-all duration-200" id="timeline" name="timeline" placeholder="cth. 4 - 6 Minggu / Q2 2025" type="text"/>
+</div>
+</div>
+<!-- Row 3: Dropdowns Layanan & Estimasi Anggaran -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div>
+<label class="block text-label-md font-label-md text-on-surface mb-2" for="service-category">
+                Layanan yang Dibutuhkan <span class="text-primary">*</span>
+</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container-lowest/80 border border-outline-variant/40 rounded-xl px-4 py-3 text-body-md font-body-md text-on-surface focus:outline-none focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 pr-10 transition-all duration-200" id="service-category" name="service">
+<option class="bg-surface-container-high text-on-surface-variant" value="">Pilih Kategori Kebutuhan</option>
+<option class="bg-surface-container-high text-on-surface" value="saas">Aplikasi Web Kustom &amp; SaaS</option>
+<option class="bg-surface-container-high text-on-surface" value="corporate">Company Profile &amp; Portal Korporat</option>
+<option class="bg-surface-container-high text-on-surface" value="ecommerce">Toko Online / E-Commerce Berperforma</option>
+<option class="bg-surface-container-high text-on-surface" value="landing">High-Converting Landing Page</option>
+<option class="bg-surface-container-high text-on-surface" value="redesign">Redesign &amp; Modernisasi Website Lama</option>
+<option class="bg-surface-container-high text-on-surface" value="maintenance">Pemeliharaan Berkala &amp; Keamanan Cloud</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3.5 text-on-surface-variant pointer-events-none text-[20px]" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+<div>
+<label class="block text-label-md font-label-md text-on-surface mb-2" for="budget">
+                Estimasi Alokasi Anggaran <span class="text-primary">*</span>
+</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container-lowest/80 border border-outline-variant/40 rounded-xl px-4 py-3 text-body-md font-body-md text-on-surface focus:outline-none focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 pr-10 transition-all duration-200" id="budget" name="budget">
+<option class="bg-surface-container-high text-on-surface-variant" value="">Pilih Kisaran Anggaran</option>
+<option class="bg-surface-container-high text-on-surface" value="small">&lt; Rp 10 Juta (Proyek Skala Kecil)</option>
+<option class="bg-surface-container-high text-on-surface" value="medium">Rp 10 - 25 Juta (Paket Bisnis Pro)</option>
+<option class="bg-surface-container-high text-on-surface" selected="" value="growth">Rp 25 - 50 Juta (Aplikasi Web &amp; E-Commerce)</option>
+<option class="bg-surface-container-high text-on-surface" value="enterprise">&gt; Rp 50 Juta (Solusi Kustom Enterprise / SaaS)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3.5 text-on-surface-variant pointer-events-none text-[20px]" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Deskripsi Kebutuhan & Ekspektasi Fitur -->
+<div>
+<label class="block text-label-md font-label-md text-on-surface mb-2" for="project-desc">
+              Deskripsi Kebutuhan &amp; Ekspektasi Fitur <span class="text-primary">*</span>
+</label>
+<textarea class="w-full bg-surface-container-lowest/80 border border-outline-variant/40 rounded-xl px-4 py-3 text-body-md font-body-md text-on-surface placeholder:text-on-surface-variant/40 focus:outline-none focus:border-primary-container focus:ring-2 focus:ring-primary-container/20 transition-all duration-200" id="project-desc" name="description" placeholder="Jelaskan ringkas mengenai sistem yang ingin dibangun, target pengguna, dan fitur utama..." rows="4"></textarea>
+</div>
+<!-- File Brief / RFP Upload Dropzone -->
+<div>
+<label class="block text-label-md font-label-md text-on-surface mb-2">
+              File Brief / Dokumen Spesifikasi Tambahan <span class="text-on-surface-variant font-normal">(Opsional)</span>
+</label>
+<div class="border-2 border-dashed border-outline-variant/50 hover:border-primary/50 transition-colors rounded-xl p-5 text-center bg-surface-container-lowest/40 cursor-pointer group">
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-[28px] mb-1" data-icon="cloud_upload">cloud_upload</span>
+<p class="text-label-md font-label-md text-on-surface group-hover:text-primary transition-colors">
+                Unggah dokumen brief / RFP (PDF, DOCX maks. 10MB)
+              </p>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1">
+                Tarik &amp; lepas dokumen di sini atau <span class="text-primary underline">telusuri file</span>
+</p>
+</div>
+</div>
+<!-- Checkbox Privacy Policy -->
+<div class="pt-2">
+<label class="flex items-start gap-3 cursor-pointer select-none">
+<input checked="" class="mt-1 rounded border-outline-variant/50 bg-surface-container-lowest text-primary-container focus:ring-primary-container/30 focus:ring-offset-background w-4 h-4" type="checkbox"/>
+<span class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+                Saya menyetujui Kebijakan Privasi dan mengizinkan CIPTA AKSARA TECH menghubungi saya mengenai penawaran ini.
+              </span>
+</label>
+</div>
+<!-- Primary CTA Button -->
+<div class="pt-3">
+<button class="w-full bg-primary-container hover:bg-[#e0f8c7] text-[#0f172a] font-label-lg font-bold py-4 px-6 rounded-xl transition-all duration-200 shadow-[0_0_24px_rgba(183,216,148,0.3)] hover:shadow-[0_0_32px_rgba(183,216,148,0.5)] active:scale-[0.98] flex items-center justify-center gap-3 tracking-wide" type="submit">
+<span>Kirim Permintaan Konsultasi &amp; RAB</span>
+<span class="material-symbols-outlined text-[20px]" data-icon="send" style="font-variation-settings: 'FILL' 1;">send</span>
+</button>
+</div>
+<p class="text-center text-[12px] font-body-sm text-on-surface-variant pt-1">
+            🔒 Data Anda dilindungi oleh enkripsi TLS 1.3 standar keamanan industri.
+          </p>
+</form>
+</section>
+<!-- =====================================================================
+           RIGHT COLUMN: Quick Action, Direct Contacts & Map (5 Cols)
+           ===================================================================== -->
+<div class="lg:col-span-5 space-y-6">
+<!-- 1. Quick Action Box (WhatsApp Fast Lane) -->
+<div class="p-6 rounded-2xl bg-gradient-to-br from-surface-container-low via-surface-container to-surface-container-low border border-[#25D366]/30 shadow-xl relative overflow-hidden">
+<div class="flex items-center justify-between mb-3">
+<span class="px-2.5 py-1 rounded-full bg-[#25D366]/15 border border-[#25D366]/30 text-[#25D366] text-label-sm font-label-sm uppercase tracking-wider flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-[#25D366] animate-ping"></span>
+              Respon Tercepat
+            </span>
+<span class="text-body-sm font-body-sm text-on-surface-variant">Avg: ~4 Menit</span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface font-bold">
+            Butuh Tanggapan Mendesak?
+          </h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-2 mb-5 leading-relaxed">
+            Hubungi Principal Engineer kami langsung via WhatsApp untuk diskusi teknis real-time, audit ringkas, atau konsultasi tender.
+          </p>
+<a class="w-full bg-[#25D366]/20 text-[#25D366] border border-[#25D366]/40 hover:bg-[#25D366]/30 font-label-lg font-semibold py-3 px-5 rounded-xl flex items-center justify-center gap-2.5 transition-all duration-200 active:scale-[0.98]" href="https://wa.me/6281198765432" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]" data-icon="forum" style="font-variation-settings: 'FILL' 1;">forum</span>
+<span>Chat Langsung via WhatsApp</span>
+</a>
+</div>
+<!-- 2. Direct Contact Details Card -->
+<div class="p-6 rounded-2xl bg-surface-container-low/90 border border-outline-variant/30 space-y-5">
+<h3 class="text-label-lg font-label-lg text-on-surface font-bold flex items-center gap-2 border-b border-outline-variant/20 pb-3">
+<span class="material-symbols-outlined text-primary text-[20px]" data-icon="contact_phone">contact_phone</span>
+            Informasi Kontak Resmi
+          </h3>
+<div class="space-y-4">
+<!-- Email Item -->
+<div class="flex items-start gap-3.5">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high border border-outline-variant/30 flex items-center justify-center text-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]" data-icon="mail">mail</span>
+</div>
+<div>
+<p class="text-label-md font-label-md text-on-surface">Email Korespondensi</p>
+<p class="text-body-sm font-body-sm text-primary font-medium hover:underline">
+<a href="mailto:halo@ciptaaksaratech.id">halo@ciptaaksaratech.id</a>
+</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+<a class="hover:underline" href="mailto:tender@ciptaaksaratech.id">tender@ciptaaksaratech.id</a> (Pengadaan / RFP)
+                </p>
+</div>
+</div>
+<!-- Phone Item -->
+<div class="flex items-start gap-3.5">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high border border-outline-variant/30 flex items-center justify-center text-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]" data-icon="call">call</span>
+</div>
+<div>
+<p class="text-label-md font-label-md text-on-surface">Telepon Kantor &amp; Hotline</p>
+<p class="text-body-sm font-body-sm text-on-surface font-medium">+62 21 5088 9200 (Hunting)</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant">+62 811 9876 5432 (WhatsApp Dedicated)</p>
+</div>
+</div>
+<!-- Operational Hours -->
+<div class="flex items-start gap-3.5 pt-2 border-t border-outline-variant/20">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high border border-outline-variant/30 flex items-center justify-center text-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]" data-icon="schedule">schedule</span>
+</div>
+<div class="text-body-sm font-body-sm space-y-1">
+<p class="text-label-md font-label-md text-on-surface">Jam Operasional Tim</p>
+<p class="text-on-surface-variant flex justify-between gap-4">
+<span>Senin - Jumat:</span> <span class="text-on-surface font-medium">09:00 - 18:00 WIB</span>
+</p>
+<p class="text-on-surface-variant flex justify-between gap-4">
+<span>Sabtu:</span> <span class="text-on-surface font-medium">10:00 - 15:00 WIB</span>
+</p>
+<div class="flex items-center gap-1.5 text-primary text-[12px] font-label-md pt-1">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>Emergency Server: 24/7 Monitoring Klien SLA</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 3. Alamat Kantor & Peta Interaktif -->
+<div class="p-6 rounded-2xl bg-surface-container-low/90 border border-outline-variant/30 space-y-4">
+<div class="flex items-start justify-between">
+<div>
+<h3 class="text-label-lg font-label-lg text-on-surface font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]" data-icon="apartment">apartment</span>
+                Kantor Pusat Operasional
+              </h3>
+<p class="text-body-sm font-body-sm text-on-surface mt-1 font-medium">
+                Cyber 2 Tower, Lantai 18
+              </p>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+                Jl. H. R. Rasuna Said Blok X-5 No. 13, Kuningan, Jakarta Selatan, DKI Jakarta 12950
+              </p>
+<p class="text-[12px] font-body-sm text-secondary mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]" data-icon="directions_subway">directions_subway</span>
+                5 menit jalan kaki dari Stasiun LRT Rasuna Said
+              </p>
+</div>
+</div>
+<!-- Styled Dark Vector Street Grid Map Placeholder -->
+<div class="w-full h-44 rounded-xl border border-outline-variant/40 overflow-hidden relative group bg-surface-container-highest cursor-pointer flex items-center justify-center" data-alt="A futuristic dark mode minimalist stylized architectural vector city map of Kuningan Jakarta showing clean geometric roads in slate blue tones with an illuminated lime green glowing radar marker pin at Cyber 2 Tower with soft ambient neon lighting." data-location="Jakarta" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDbS2oB4X0sWfvGUxGh1QpmmAtP9Sk1hvs8RaHEM33HnpReXL7MQcfRcTc4uyQpFHAhtTluBM9nKfiHBtYZY7w9j3KVsbTSA2qgzVBJtmPOwmWpsC9DAeyuaZs36mPItY2bWJn3vLgkSSnMqiw_-9lIXte5mBIlPYgKdGPfrqHw0w5mFZnO0oAhe8FGu94TinqFf1uA0Rry0NpefKfmuwI5_XlVO11zUd9yasP7xil7JTsmeEXD5l2pXw')">
+<!-- Overlay Backdrop -->
+<div class="absolute inset-0 bg-background/60 group-hover:bg-background/40 transition-colors backdrop-blur-[2px]"></div>
+<!-- Stylized Floating Pin for Cipta Aksara HQ -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 border-2 border-primary flex items-center justify-center shadow-[0_0_20px_#b7d894] animate-bounce">
+<span class="material-symbols-outlined text-on-primary font-bold text-[20px]" data-icon="location_on" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+<div class="mt-1 px-3 py-1 rounded-md bg-surface-container-highest/95 border border-primary/40 text-[11px] font-label-sm text-primary shadow-lg backdrop-blur-md">
+                CIPTA AKSARA TECH HQ - Cyber 2 Tower
+              </div>
+</div>
+<!-- Trailing CTA in Map -->
+<div class="absolute bottom-2 right-2 z-10">
+<span class="px-2.5 py-1 rounded bg-surface-container-lowest/80 text-[11px] font-label-md text-on-surface hover:text-primary border border-outline-variant/30 flex items-center gap-1">
+                Buka Petunjuk Arah di Google Maps ↗
+              </span>
+</div>
+</div>
+</div>
+<!-- 4. Komitmen Transparansi & Keamanan -->
+<div class="p-4 rounded-xl bg-surface-container-high/60 border border-outline-variant/30 flex items-center justify-between text-center gap-2">
+<div class="flex-1">
+<span class="material-symbols-outlined text-primary text-[20px]" data-icon="verified_user">verified_user</span>
+<p class="text-label-sm font-label-sm text-on-surface mt-0.5">100% NDA</p>
+<p class="text-[11px] font-body-sm text-on-surface-variant">Kerahasiaan Hukum</p>
+</div>
+<div class="w-px h-8 bg-outline-variant/30"></div>
+<div class="flex-1">
+<span class="material-symbols-outlined text-primary text-[20px]" data-icon="speed">speed</span>
+<p class="text-label-sm font-label-sm text-on-surface mt-0.5">&lt; 15 Menit</p>
+<p class="text-[11px] font-body-sm text-on-surface-variant">SLA Respon Kilat</p>
+</div>
+<div class="w-px h-8 bg-outline-variant/30"></div>
+<div class="flex-1">
+<span class="material-symbols-outlined text-primary text-[20px]" data-icon="lock_open">lock_open</span>
+<p class="text-label-sm font-label-sm text-on-surface mt-0.5">Zero Lock-in</p>
+<p class="text-[11px] font-body-sm text-on-surface-variant">Source Code Milik Anda</p>
+</div>
+</div>
+</div>
+</div>
+<!-- =========================================================================
+         4. FAQ SINGKAT SEPUTAR KONSULTASI (Accordions)
+         ========================================================================= -->
+<div class="mt-16 pt-12 border-t border-outline-variant/30">
+<div class="max-w-3xl mx-auto">
+<div class="text-center mb-8">
+<h2 class="text-headline-md font-headline-md text-on-surface font-bold">
+            Pertanyaan yang Sering Diajukan
+          </h2>
+<p class="text-body-md font-body-md text-on-surface-variant mt-2">
+            Transparansi proses komunikasi dan komitmen teknis sebelum proyek dimulai.
+          </p>
+</div>
+<div class="space-y-4">
+<!-- FAQ 1 -->
+<details class="group bg-surface-container-low border border-outline-variant/30 rounded-xl p-5 open:bg-surface-container transition-all duration-200">
+<summary class="flex justify-between items-center cursor-pointer list-none text-label-lg font-label-lg text-on-surface font-semibold group-hover:text-primary">
+<span class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[20px]" data-icon="help">help</span>
+                Apakah sesi konsultasi 30 menit ini benar-benar gratis?
+              </span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform group-open:rotate-180" data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+</summary>
+<div class="mt-3.5 pl-8 text-body-md font-body-md text-on-surface-variant leading-relaxed border-t border-outline-variant/20 pt-3">
+              Ya, 100% gratis tanpa ikatan kontrak komersial. Kami percaya diskusi awal yang solid membantu mengidentifikasi kelayakan arsitektur, pemilihan teknologi modern (React, Next.js, Node.js, Go), serta efisiensi anggaran perusahaan Anda.
+            </div>
+</details>
+<!-- FAQ 2 -->
+<details class="group bg-surface-container-low border border-outline-variant/30 rounded-xl p-5 open:bg-surface-container transition-all duration-200">
+<summary class="flex justify-between items-center cursor-pointer list-none text-label-lg font-label-lg text-on-surface font-semibold group-hover:text-primary">
+<span class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[20px]" data-icon="help">help</span>
+                Berapa lama kami menerima estimasi biaya dan proposal?
+              </span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform group-open:rotate-180" data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+</summary>
+<div class="mt-3.5 pl-8 text-body-md font-body-md text-on-surface-variant leading-relaxed border-t border-outline-variant/20 pt-3">
+              Estimasi awal diberikan dalam 1x24 jam kerja setelah formulir diverifikasi dan parameter fitur telah dipahami oleh tim Technical Architect kami. Untuk kebutuhan RFP korporasi berskala enterprise, kami dapat menjadwalkan presentasi blueprint dalam 2-3 hari kerja.
+            </div>
+</details>
+<!-- FAQ 3 -->
+<details class="group bg-surface-container-low border border-outline-variant/30 rounded-xl p-5 open:bg-surface-container transition-all duration-200">
+<summary class="flex justify-between items-center cursor-pointer list-none text-label-lg font-label-lg text-on-surface font-semibold group-hover:text-primary">
+<span class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[20px]" data-icon="help">help</span>
+                Apakah data dan ide proyek kami dilindungi kerahasiaannya?
+              </span>
+<span class="material-symbols-outlined text-on-surface-variant transition-transform group-open:rotate-180" data-icon="keyboard_arrow_down">keyboard_arrow_down</span>
+</summary>
+<div class="mt-3.5 pl-8 text-body-md font-body-md text-on-surface-variant leading-relaxed border-t border-outline-variant/20 pt-3">
+              Semua dokumen brief, sketsa arsitektur, dan diskusi verbal dilindungi NDA (Non-Disclosure Agreement) standar legal Indonesia. Kami dapat menandatangani dokumen NDA mutual perusahaan Anda sebelum detail spesifikasi teknis dibuka.
+            </div>
+</details>
+</div>
+</div>
+</div>
+</main>
+<!-- =========================================================================
+       5. CORPORATE FOOTER (Shared Component: Footer)
+       ========================================================================= -->
+<footer class="docked full-width bg-surface-container-lowest border-t border-outline-variant/20">
+<div class="w-full px-6 lg:px-12 py-16 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 mb-12">
+<!-- Brand Info -->
+<div class="md:col-span-5 space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-7 h-7 rounded-md bg-surface-container-high border border-primary/30 flex items-center justify-center">
+<span class="w-2 h-2 rounded-full bg-primary-container shadow-[0_0_8px_#b7d894]"></span>
+</div>
+<span class="text-headline-sm font-headline-sm font-bold text-on-surface">
+              CIPTA AKSARA TECH
+            </span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant max-w-md leading-relaxed">
+            Perusahaan rekayasa perangkat lunak dan arsitektur digital terdepan di Indonesia. Mengakselerasi skalabilitas sistem korporat, SaaS, dan transformasi digital institusi.
+          </p>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-high border border-outline-variant/30 text-[12px] font-label-md text-primary">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>Semua Sistem Operasional Normal</span>
+</div>
+</div>
+<!-- Links Cluster (from JSON) -->
+<div class="md:col-span-7 grid grid-cols-2 sm:grid-cols-3 gap-6">
+<div class="space-y-3">
+<h4 class="text-label-md font-label-md font-bold text-on-surface">Solusi Utama</h4>
+<ul class="space-y-2 text-body-sm font-body-sm">
+<li><a class="text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="#">Layanan Web Development</a></li>
+<li><a class="text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="#">Paket Pembuatan Website</a></li>
+<li><a class="text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="#">Portofolio Klien</a></li>
+</ul>
+</div>
+<div class="space-y-3">
+<h4 class="text-label-md font-label-md font-bold text-on-surface">Kemitraan</h4>
+<ul class="space-y-2 text-body-sm font-body-sm">
+<li><a class="text-primary font-body-sm font-medium" href="#">Hubungi Tim</a></li>
+<li><a class="text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="#">Konsultasi Arsitektur</a></li>
+<li><a class="text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="#">Vendor Pengadaan</a></li>
+</ul>
+</div>
+<div class="space-y-3">
+<h4 class="text-label-md font-label-md font-bold text-on-surface">Legalitas</h4>
+<ul class="space-y-2 text-body-sm font-body-sm">
+<li><a class="text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="#">Syarat &amp; Ketentuan</a></li>
+<li><a class="text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="#">Kebijakan Privasi</a></li>
+<li><a class="text-on-surface-variant hover:text-on-surface transition-colors duration-200" href="#">Keamanan Cloud</a></li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Bottom Bar -->
+<div class="pt-8 border-t border-outline-variant/15 flex flex-col sm:flex-row justify-between items-center gap-4">
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+          © 2025 CIPTA AKSARA TECH. Hak Cipta Dilindungi Undang-Undang.
+        </p>
+<div class="flex items-center gap-6 text-body-sm font-body-sm text-on-surface-variant">
+<span class="hover:text-primary transition-colors cursor-pointer">Jakarta, Indonesia</span>
+<span>•</span>
+<span class="text-primary font-medium">ISO 27001 Certified Readiness</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

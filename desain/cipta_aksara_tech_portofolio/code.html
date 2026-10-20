@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Portofolio Proyek Rekayasa Web | CIPTA AKSARA TECH</title>
+<!-- Google Fonts: Plus Jakarta Sans & Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Google Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 with Forms & Container Queries -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "outline": "#8e9285",
+            "secondary": "#bbc6e5",
+            "secondary-container": "#3e4962",
+            "on-tertiary-container": "#495d38",
+            "primary-fixed-dim": "#b0d18d",
+            "on-tertiary": "#233514",
+            "tertiary-fixed-dim": "#b7cea0",
+            "primary-fixed": "#cceda7",
+            "surface": "#0c1320",
+            "on-secondary-container": "#adb8d6",
+            "surface-dim": "#0c1320",
+            "on-tertiary-fixed-variant": "#394c29",
+            "on-secondary": "#253048",
+            "surface-container-low": "#151c28",
+            "on-surface": "#dce2f4",
+            "on-primary": "#1e3704",
+            "secondary-fixed-dim": "#bbc6e5",
+            "on-tertiary-fixed": "#0f2003",
+            "error-container": "#93000a",
+            "on-primary-fixed": "#0e2000",
+            "surface-variant": "#2e3542",
+            "on-background": "#dce2f4",
+            "on-error-container": "#ffdad6",
+            "primary-container": "#b7d894",
+            "primary": "#d3f5ae",
+            "surface-container-highest": "#2e3542",
+            "outline-variant": "#44483d",
+            "on-surface-variant": "#c4c8b9",
+            "tertiary-fixed": "#d2eaba",
+            "on-error": "#690005",
+            "error": "#ffb4ab",
+            "surface-container-lowest": "#070e1a",
+            "surface-container-high": "#232a37",
+            "on-secondary-fixed": "#101b32",
+            "on-primary-fixed-variant": "#344e19",
+            "tertiary": "#daf2c1",
+            "tertiary-container": "#bed5a6",
+            "surface-container": "#19202c",
+            "on-primary-container": "#435f28",
+            "on-secondary-fixed-variant": "#3c4760",
+            "inverse-surface": "#dce2f4",
+            "inverse-primary": "#4a662f",
+            "inverse-on-surface": "#2a313e",
+            "secondary-fixed": "#d8e2ff",
+            "surface-tint": "#b0d18d",
+            "surface-bright": "#323947",
+            "background": "#0c1320"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-lg": "1.5rem",
+            "margin": "3rem",
+            "gutter": "1.5rem",
+            "space-xs": "0.25rem",
+            "gutter-mobile": "1rem",
+            "space-xl": "2.5rem",
+            "space-sm": "0.5rem",
+            "margin-mobile": "1.25rem",
+            "space-md": "1rem"
+          },
+          "fontFamily": {
+            "label-sm": ["Plus Jakarta Sans"],
+            "body-lg": ["Inter"],
+            "body-md": ["Inter"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "body-sm": ["Inter"],
+            "label-md": ["Plus Jakarta Sans"],
+            "display-hero": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "display-hero-mobile": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "display-hero": ["56px", { "lineHeight": "68px", "letterSpacing": "-0.03em", "fontWeight": "800" }],
+            "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }]
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    /* Custom Material Symbol alignment */
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .material-symbols-outlined.fill-icon {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    /* Ambient pistachio glow effect */
+    .glow-pistachio {
+      box-shadow: 0 0 24px rgba(183, 216, 148, 0.28);
+    }
+    .glow-pistachio-hover:hover {
+      box-shadow: 0 0 28px rgba(183, 216, 148, 0.38);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary-container selection:text-on-primary-container min-h-screen antialiased flex flex-col justify-between overflow-x-hidden">
+<!-- ======================================================== -->
+<!-- 1. TOP NAVIGATION BAR (Shared Component Anchor)           -->
+<!-- ======================================================== -->
+<header class="bg-surface/85 dark:bg-surface/85 backdrop-blur-md docked full-width top-0 sticky z-50 border-b border-outline-variant/30 shadow-sm transition-all duration-200">
+<div class="flex justify-between items-center w-full px-6 lg:px-12 max-w-7xl mx-auto h-20">
+<!-- Brand Logo Anchor -->
+<a class="flex items-center gap-3 group active:scale-[0.98] transition-transform duration-150" href="#">
+<div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center text-surface shadow-sm group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-surface font-bold" data-icon="terminal">terminal</span>
+</div>
+<span class="text-headline-sm font-headline-sm font-bold tracking-tight text-on-surface dark:text-on-surface">
+          CIPTA AKSARA TECH
+        </span>
+</a>
+<!-- Desktop Navigation Links (Portofolio is Active) -->
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-on-surface-variant font-label-lg hover:text-primary transition-colors duration-200" href="#">Beranda</a>
+<a class="text-on-surface-variant font-label-lg hover:text-primary transition-colors duration-200" href="#">Layanan</a>
+<!-- ACTIVE LINK (Portofolio) -->
+<a class="text-primary font-label-lg font-semibold border-b-2 border-primary pb-1" href="#">Portofolio</a>
+<a class="text-on-surface-variant font-label-lg hover:text-primary transition-colors duration-200" href="#">Paket Harga</a>
+<a class="text-on-surface-variant font-label-lg hover:text-primary transition-colors duration-200" href="#">Tentang</a>
+<a class="text-on-surface-variant font-label-lg hover:text-primary transition-colors duration-200" href="#">Kontak</a>
+</nav>
+<!-- Trailing Action -->
+<div class="flex items-center gap-4">
+<a class="hidden sm:inline-flex items-center gap-2 bg-primary-container text-surface px-5 py-2.5 rounded-lg text-label-lg font-label-lg font-bold hover:bg-[#E0F8C7] glow-pistachio-hover active:scale-[0.98] transition-all duration-150" href="#kontak">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+<span>Konsultasi Gratis</span>
+</a>
+<!-- Mobile Hamburger Trigger -->
+<button class="md:hidden p-2 rounded-lg text-on-surface hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- ======================================================== -->
+<!-- MAIN CONTENT CANVAS                                      -->
+<!-- ======================================================== -->
+<main class="flex-grow">
+<!-- 2. COMPACT HERO SECTION & PROOF METRICS STRIP -->
+<section class="relative pt-12 pb-16 overflow-hidden border-b border-white/[0.06]">
+<!-- Background Ambient Grid Glow -->
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(183,216,148,0.12),transparent_70%)] pointer-events-none"></div>
+<div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+<!-- Breadcrumb Navigation -->
+<div class="flex items-center gap-2 text-label-md font-label-md text-on-surface-variant mb-6">
+<a class="hover:text-primary transition-colors" href="#">Beranda</a>
+<span class="material-symbols-outlined text-sm text-outline" data-icon="chevron_right">chevron_right</span>
+<span class="text-primary font-medium">Portofolio</span>
+</div>
+<div class="max-w-4xl">
+<!-- Subtle Pill Badge -->
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-container/10 border border-primary-container/25 text-primary text-label-md font-label-md mb-5">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+            Karya Nyata &amp; Studi Kasus
+          </div>
+<!-- Hero Headline -->
+<h1 class="text-display-hero-mobile md:text-display-hero font-display-hero text-on-surface tracking-tight mb-6">
+            Portofolio Proyek Rekayasa Web yang Terbukti <span class="text-primary inline-block underline decoration-primary/40 underline-offset-8">Mendorong Pertumbuhan</span>.
+          </h1>
+<!-- Hero Subtitle -->
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-3xl leading-relaxed mb-12">
+            Eksplorasi ragam situs korporat, platform e-commerce, landing page konversi tinggi, hingga aplikasi web kustom yang kami bangun dengan standar performa kelas dunia.
+          </p>
+</div>
+<!-- Quick Trust / Proof Strip (4 Metric Counter Cards) -->
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 pt-6">
+<div class="bg-surface-container-high/60 backdrop-blur-md border border-white/[0.08] rounded-xl p-5 hover:border-primary-container/40 transition-all">
+<div class="text-primary font-display-hero-mobile md:text-headline-lg font-headline-lg mb-1 tracking-tight">50+</div>
+<div class="text-label-md font-label-md text-on-surface-variant">Proyek Berhasil Diluncurkan</div>
+<div class="mt-2 text-label-sm font-label-sm text-primary/80 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="verified">verified</span>
+              100% On-Time Delivery
+            </div>
+</div>
+<div class="bg-surface-container-high/60 backdrop-blur-md border border-white/[0.08] rounded-xl p-5 hover:border-primary-container/40 transition-all">
+<div class="text-primary font-display-hero-mobile md:text-headline-lg font-headline-lg mb-1 tracking-tight">99.8%</div>
+<div class="text-label-md font-label-md text-on-surface-variant">Uptime &amp; Performa Tinggi</div>
+<div class="mt-2 text-label-sm font-label-sm text-primary/80 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="speed">speed</span>
+              Average Core Web Vitals Grade A
+            </div>
+</div>
+<div class="bg-surface-container-high/60 backdrop-blur-md border border-white/[0.08] rounded-xl p-5 hover:border-primary-container/40 transition-all">
+<div class="text-primary font-display-hero-mobile md:text-headline-lg font-headline-lg mb-1 tracking-tight">+185%</div>
+<div class="text-label-md font-label-md text-on-surface-variant">Rata-rata Peningkatan Konversi Klien</div>
+<div class="mt-2 text-label-sm font-label-sm text-primary/80 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="trending_up">trending_up</span>
+              Data Terverifikasi Q4 2024
+            </div>
+</div>
+<div class="bg-surface-container-high/60 backdrop-blur-md border border-white/[0.08] rounded-xl p-5 hover:border-primary-container/40 transition-all">
+<div class="text-primary font-display-hero-mobile md:text-headline-lg font-headline-lg mb-1 tracking-tight">100%</div>
+<div class="text-label-md font-label-md text-on-surface-variant">Kepemilikan Source Code</div>
+<div class="mt-2 text-label-sm font-label-sm text-primary/80 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="code">code</span>
+              Bebas Lock-in Vendor
+            </div>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. INTERACTIVE FILTER CHIPS & SORT BAR -->
+<section class="py-8 border-b border-white/[0.06] bg-surface-container-lowest/50 sticky top-20 z-40 backdrop-blur-lg">
+<div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row md:items-center justify-between gap-4">
+<!-- Filter Category Buttons -->
+<div class="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-none">
+<!-- Active Chip -->
+<button class="px-4 py-2 rounded-full bg-primary-container text-surface font-label-md font-semibold text-label-md flex items-center gap-1.5 shadow-sm whitespace-nowrap active:scale-95 transition-transform">
+<span>Semua (24)</span>
+</button>
+<!-- Inactive Chips -->
+<button class="px-4 py-2 rounded-full bg-surface-container-high/80 hover:bg-surface-container-highest border border-white/[0.08] text-on-surface-variant hover:text-on-surface font-label-md text-label-md whitespace-nowrap transition-colors">
+            Company Profile (8)
+          </button>
+<button class="px-4 py-2 rounded-full bg-surface-container-high/80 hover:bg-surface-container-highest border border-white/[0.08] text-on-surface-variant hover:text-on-surface font-label-md text-label-md whitespace-nowrap transition-colors">
+            E-commerce &amp; Toko Online (6)
+          </button>
+<button class="px-4 py-2 rounded-full bg-surface-container-high/80 hover:bg-surface-container-highest border border-white/[0.08] text-on-surface-variant hover:text-on-surface font-label-md text-label-md whitespace-nowrap transition-colors">
+            Landing Page Konversi (5)
+          </button>
+<button class="px-4 py-2 rounded-full bg-surface-container-high/80 hover:bg-surface-container-highest border border-white/[0.08] text-on-surface-variant hover:text-on-surface font-label-md text-label-md whitespace-nowrap transition-colors">
+            Aplikasi Web Kustom (5)
+          </button>
+</div>
+<!-- Secondary Sort / Industry Dropdown Selector -->
+<div class="flex items-center gap-3 shrink-0 self-end md:self-auto">
+<span class="text-label-md font-label-md text-on-surface-variant">Urutkan:</span>
+<div class="relative inline-block">
+<select class="bg-surface-container border border-white/[0.12] rounded-lg px-3 py-1.5 pr-8 text-label-md font-label-md text-on-surface focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container cursor-pointer appearance-none">
+<option value="terbaru">Terbaru</option>
+<option value="dampak">Dampak Tertinggi</option>
+<option value="populer">Paling Populer</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-2 text-sm text-outline pointer-events-none" data-icon="unfold_more">unfold_more</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. RESPONSIVE PORTFOLIO BENTO & CARD GRID (6 Deep Case Studies) -->
+<section class="py-16 lg:py-24 max-w-7xl mx-auto px-6 lg:px-12">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- CASE STUDY 1: FinAnSync (Span 2 columns bento feel on desktop) -->
+<div class="lg:col-span-2 group bg-surface-container/70 backdrop-blur-md rounded-2xl border border-white/[0.08] hover:border-primary-container/50 hover:shadow-[0_20px_40px_-12px_rgba(15,23,42,0.5)] transition-all duration-300 flex flex-col justify-between overflow-hidden">
+<!-- Mockup Frame Container -->
+<div class="relative bg-surface-container-lowest p-6 border-b border-white/[0.06] overflow-hidden">
+<!-- Simulated Browser Bar -->
+<div class="flex items-center justify-between mb-4 pb-2 border-b border-white/[0.05]">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-error/60"></span>
+<span class="w-3 h-3 rounded-full bg-tertiary-container/60"></span>
+<span class="w-3 h-3 rounded-full bg-primary/60"></span>
+</div>
+<div class="text-label-sm font-label-sm text-outline bg-surface-container px-3 py-0.5 rounded text-xs flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="lock">lock</span>
+                https://app.finansync.id/treasury-dashboard
+              </div>
+<div class="text-outline">
+<span class="material-symbols-outlined text-sm" data-icon="refresh">refresh</span>
+</div>
+</div>
+<!-- Stylized Dual Dashboard UI Preview Frame -->
+<div class="relative rounded-lg overflow-hidden border border-white/10 group-hover:scale-[1.01] transition-transform duration-300 aspect-[16/9] w-full">
+<img class="w-full h-full object-cover" data-alt="A sophisticated dark-mode financial software dashboard interface showing complex multi-bank treasury analytics, real-time balance trends, line charts, and cash flow meters. The sleek modern UI features deep slate tones (#202734), glassmorphic data panels, and vivid pistachio lime accent highlights (#B7D894) with crisp digital typography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeQMrTwRBuID3pvsiGwS2bNnKlxD0w_8SneILunV9-zX0p0Wk6s9S9-1Ew-4m_vCWnn8nC-2V7hvkde3EZqXWJsKZDTXK7CNqqeT2iZupAWqiv35mcDeH3TWkhntJWLURW-0lpsvxnf4xa0AI-6JK-hWlDLiR0EOyyA7uJEx_IvEi-2fwjm94JooNDvoS8zIQ76GWV7mD3bb8uiUkrDkzGn9FrT2KK0anRr3DaRZ-c8Ube9tj_df01nQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent"></div>
+</div>
+<!-- Floating Impact Pill on Mockup -->
+<div class="absolute bottom-10 left-10 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high/90 border border-primary-container/40 text-primary font-label-md font-semibold backdrop-blur-md">
+<span class="material-symbols-outlined text-sm" data-icon="monitoring">monitoring</span>
+              +210% User Adoption &amp; Real-time Settlement
+            </div>
+</div>
+<!-- Card Content Body -->
+<div class="p-8 flex flex-col justify-between flex-grow">
+<div>
+<div class="flex items-center justify-between gap-2 mb-3">
+<span class="text-label-sm font-label-sm text-primary uppercase tracking-wider">Aplikasi Web Kustom</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="schedule">schedule</span> 8 Minggu Pengerjaan
+                </span>
+</div>
+<h3 class="text-headline-md font-headline-md text-on-surface group-hover:text-primary transition-colors mb-2">
+                FinAnSync Multi-Bank Treasury
+              </h3>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6 leading-relaxed">
+                Tantangan integrasi API multi-bank enterprise dengan konsolidasi arus kas harian tanpa jeda data. Kami merancang arsitektur micro-frontend berlatensi ultra-rendah dengan visualisasi laporan mutasi otomatis.
+              </p>
+</div>
+<div>
+<!-- Tech Stack Badges -->
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-2.5 py-1 bg-surface-container-highest rounded text-label-sm font-label-sm text-on-surface">Next.js 14</span>
+<span class="px-2.5 py-1 bg-surface-container-highest rounded text-label-sm font-label-sm text-on-surface">Golang API</span>
+<span class="px-2.5 py-1 bg-surface-container-highest rounded text-label-sm font-label-sm text-on-surface">PostgreSQL</span>
+<span class="px-2.5 py-1 bg-surface-container-highest rounded text-label-sm font-label-sm text-on-surface">Tailwind CSS</span>
+<span class="px-2.5 py-1 bg-surface-container-highest rounded text-label-sm font-label-sm text-on-surface">Redis Cache</span>
+</div>
+<!-- Interactive Action CTA Buttons -->
+<div class="flex items-center justify-between pt-4 border-t border-white/[0.06]">
+<a class="inline-flex items-center gap-1.5 text-primary font-label-lg font-semibold hover:underline" href="#">
+                  Lihat Studi Kasus Lengkap
+                  <span class="material-symbols-outlined text-base" data-icon="arrow_forward">arrow_forward</span>
+</a>
+<a class="p-2 text-on-surface-variant hover:text-on-surface rounded-lg bg-surface-container-high/60 hover:bg-surface-container-high transition-colors" href="#" title="Kunjungi Website Live">
+<span class="material-symbols-outlined text-base" data-icon="open_in_new">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- CASE STUDY 2: Aura Botanical Skincare (Standard Grid 1 col) -->
+<div class="group bg-surface-container/70 backdrop-blur-md rounded-2xl border border-white/[0.08] hover:border-primary-container/50 hover:shadow-[0_20px_40px_-12px_rgba(15,23,42,0.5)] transition-all duration-300 flex flex-col justify-between overflow-hidden">
+<!-- Mockup Frame -->
+<div class="relative bg-surface-container-lowest p-6 border-b border-white/[0.06]">
+<div class="relative rounded-lg overflow-hidden border border-white/10 aspect-[4/3] w-full">
+<img class="w-full h-full object-cover" data-alt="A clean, minimalist luxury e-commerce product catalog and mobile-responsive shopping cart for a botanical skincare brand. The aesthetic showcases organic textures, pale sage backgrounds, slate UI containers, and crisp pistachio accents highlight elements with high-end product photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcx7hMs9ltYr0oyYoKxXRSRghRy-vTkOATSfJggZVtr0r7ivJFwg2bhNM8gIhEUVv4cH26AGl2JAs_lMR0vfsq86ubNUnOeRA0RwMGg8TcwitH0LDvGz2ALVWzPfLuAvv1yZnJs46Ec_8GMTwCKZ_MaI1oduxUU6EE65w6Hh-QC-YBmOnVtNDLDUd4KCKyZbjROO8aFUp9QymtQOIEH9t2ZhjIe6zFXzrtKmGVkNbquQsnU7m2w8ytEA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent"></div>
+</div>
+<!-- Impact Tag -->
+<div class="absolute bottom-10 left-10 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high/90 border border-primary-container/40 text-primary font-label-md font-semibold backdrop-blur-md">
+<span class="material-symbols-outlined text-sm" data-icon="payments">payments</span>
+              Rp 1.4M GMV / Bulan
+            </div>
+</div>
+<!-- Card Content Body -->
+<div class="p-6 flex flex-col justify-between flex-grow">
+<div>
+<div class="flex items-center justify-between gap-2 mb-2">
+<span class="text-label-sm font-label-sm text-primary uppercase tracking-wider">E-commerce Berperforma</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="schedule">schedule</span> 5 Minggu
+                </span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors mb-2">
+                Aura Botanical Skincare
+              </h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-6 leading-relaxed">
+                Toko online lama mengalami bounce rate tinggi saat checkout. Kami membangun platform headless e-commerce dengan one-page checkout dan integrasi payment gateway instan.
+              </p>
+</div>
+<div>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-2 py-0.5 bg-surface-container-highest rounded text-label-sm font-label-sm text-on-surface">Headless Shopify</span>
+<span class="px-2 py-0.5 bg-surface-container-highest rounded text-label-sm font-label-sm text-on-surface">Next.js 14</span>
+<span class="px-2 py-0.5 bg-surface-container-highest rounded text-label-sm font-label-sm text-on-surface">Midtrans API</span>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-white/[0.06]">
+<a class="inline-flex items-center gap-1.5 text-primary font-label-md font-semibold hover:underline" href="#">
+                  Lihat Studi Kasus
+                  <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+<a class="p-2 text-on-surface-variant hover:text-on-surface rounded-lg bg-surface-container-high/60 transition-colors" href="#">
+<span class="material-symbols-outlined text-base" data-icon="open_in_new">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- CASE STUDY 3: Nusantara Logistics Group -->
+<div class="group bg-surface-container/70 backdrop-blur-md rounded-2xl border border-white/[0.08] hover:border-primary-container/50 hover:shadow-[0_20px_40px_-12px_rgba(15,23,42,0.5)] transition-all duration-300 flex flex-col justify-between overflow-hidden">
+<div class="relative bg-surface-container-lowest p-6 border-b border-white/[0.06]">
+<div class="relative rounded-lg overflow-hidden border border-white/10 aspect-[4/3] w-full">
+<img class="w-full h-full object-cover" data-alt="Corporate enterprise website design featuring supply chain tracking UI, interactive 3D container fleet maps, dynamic tariff calculators, and sleek dark slate aesthetics with lime accent borders and subtle glows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6yB6KtiGRUHCwrZ7PMfH5zsC6LcvVWg5g0dvH2jS2Jk4P_THk30gPwwxFGBc0d8C2OuBCKfCx5-nWo_h19SHkb1Xr99FjatyLtgcY2ZL5jtpCQT_s0LRJayDoMIjSYETIZUU-nRogK3inSBO5_5a2p-ge7_UzDdad0oPZER4f631dMhYEMOKf_AHj2vuMI7VRr4Fs0bK5Gqx6kXYbrb91BS5FOO0Y1lBYiaKlZziA7z0S5f4kgOv89A"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent"></div>
+</div>
+<div class="absolute bottom-10 left-10 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high/90 border border-primary-container/40 text-primary font-label-md font-semibold backdrop-blur-md">
+<span class="material-symbols-outlined text-sm" data-icon="bolt">bolt</span>
+              0.8s Load Time - 99 PageSpeed
+            </div>
+</div>
+<div class="p-6 flex flex-col justify-between flex-grow">
+<div>
+<div class="flex items-center justify-between gap-2 mb-2">
+<span class="text-label-sm font-label-sm text-primary uppercase tracking-wider">Company Profile Premium</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="schedule">schedule</span> 4 Minggu
+                </span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors mb-2">
+                Nusantara Logistics Group
+              </h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-6 leading-relaxed">
+                Kebutuhan portal korporat multibahasa dengan fitur pelacakan armada live bagi klien B2B global. Ditenagai arsitektur SSR ringan dengan edge caching global.
+              </p>
+</div>
+<div>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-2 py-0.5 bg-surface-container-highest rounded text-label-sm font-label-sm text-on-surface">Astro 4</span>
+<span class="px-2 py-0.5 bg-surface-container-highest rounded text-label-sm font-label-sm text-on-surface">Tailwind CSS</span>
+<span class="px-2 py-0.5 bg-surface-container-highest rounded text-label-sm font-label-sm text-on-surface">Vercel Edge</span>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-white/[0.06]">
+<a class="inline-flex items-center gap-1.5 text-primary font-label-md font-semibold hover:underline" href="#">
+                  Lihat Studi Kasus
+                  <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+<a class="p-2 text-on-surface-variant hover:text-on-surface rounded-lg bg-surface-container-high/60 transition-colors" href="#">
+<span class="material-symbols-outlined text-base" data-icon="open_in_new">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- CASE STUDY 4: Kopi Selaras Roastery -->
+<div class="group bg-surface-container/70 backdrop-blur-md rounded-2xl border border-white/[0.08] hover:border-primary-container/50 hover:shadow-[0_20px_40px_-12px_rgba(15,23,42,0.5)] transition-all duration-300 flex flex-col justify-between overflow-hidden">
+<div class="relative bg-surface-container-lowest p-6 border-b border-white/[0.06]">
+<div class="relative rounded-lg overflow-hidden border border-white/10 aspect-[4/3] w-full">
+<img class="w-full h-full object-cover" data-alt="High-converting dark aesthetic landing page for an artisan coffee roastery with interactive flavor profile wheel, coffee bean origin selector, and streamlined subscription order flow with glowing lime accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCh0lp_0NJDGRZRVjSoeJ_y7HuGbUClbLUuQ23WPDhUDP8FO_YpcSfBZhR2v7h2dSkVabO2jkSYi0Kw3MFk1j0135uha0X_fZ-DhMq6OimDuyCXjow-TlhEbLkoQSW21_vHkozaky7L0iD_NmkHh5leam4n3m4HbqrUyO0VeYxVEuwpRot0Xm9gEbGEUkTe2MTkSPB1g1yu0jU8-BHDQFeefhSm7EGa5RqN28i7jFZ72uz9J7MH0hyOrQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent"></div>
+</div>
+<div class="absolute bottom-10 left-10 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high/90 border border-primary-container/40 text-primary font-label-md font-semibold backdrop-blur-md">
+<span class="material-symbols-outlined text-sm" data-icon="query_stats">query_stats</span>
+              +340% Lead Generation
+            </div>
+</div>
+<div class="p-6 flex flex-col justify-between flex-grow">
+<div>
+<div class="flex items-center justify-between gap-2 mb-2">
+<span class="text-label-sm font-label-sm text-primary uppercase tracking-wider">High-Converting Landing Page</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="schedule">schedule</span> 3 Minggu
+                </span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors mb-2">
+                Kopi Selaras Roastery
+              </h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-6 leading-relaxed">
+                Peluncuran program langganan biji kopi B2B dan ritel. Menggunakan storytelling visual interaktif dengan pengujian A/B testing copy dan alur pemesanan tanpa friksi.
+              </p>
+</div>
+<div>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-2 py-0.5 bg-surface-container-highest rounded text-label-sm font-label-sm text-on-surface">Next.js</span>
+<span class="px-2 py-0.5 bg-surface-container-highest rounded text-label-sm font-label-sm text-on-surface">Framer Motion</span>
+<span class="px-2 py-0.5 bg-surface-container-highest rounded text-label-sm font-label-sm text-on-surface">Stripe API</span>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-white/[0.06]">
+<a class="inline-flex items-center gap-1.5 text-primary font-label-md font-semibold hover:underline" href="#">
+                  Lihat Studi Kasus
+                  <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+<a class="p-2 text-on-surface-variant hover:text-on-surface rounded-lg bg-surface-container-high/60 transition-colors" href="#">
+<span class="material-symbols-outlined text-base" data-icon="open_in_new">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- CASE STUDY 5: Medika Solusi Telehealth -->
+<div class="group bg-surface-container/70 backdrop-blur-md rounded-2xl border border-white/[0.08] hover:border-primary-container/50 hover:shadow-[0_20px_40px_-12px_rgba(15,23,42,0.5)] transition-all duration-300 flex flex-col justify-between overflow-hidden">
+<div class="relative bg-surface-container-lowest p-6 border-b border-white/[0.06]">
+<div class="relative rounded-lg overflow-hidden border border-white/10 aspect-[4/3] w-full">
+<img class="w-full h-full object-cover" data-alt="Secure medical telehealth software web interface showcasing doctor video consultation schedule, patient electronic health records dashboard, and prescription delivery tracker with calm deep slate and lime status badges." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkM22gkNmwuYKgwSzfWSuhD5phHs8nbk4Wr25O5QKwT4_RxtAJPtNNFcpQrB4ERicXchG0UqFynK5Z_TCokivUcA_-AF11IahaIfCaadFyCtaoQiw3c9UHe27rXDuCH-jykk6NCrwHZNS9pBR7hN2AARoEn969t__UArrUn8TGUGLuNzldfow2yMPVQoctkPRn9Z2rwafL5lzT2p9ttIYx1Rw_tC05LuShj_EKrlh9DfKsfynXN0RekQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent"></div>
+</div>
+<div class="absolute bottom-10 left-10 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high/90 border border-primary-container/40 text-primary font-label-md font-semibold backdrop-blur-md">
+<span class="material-symbols-outlined text-sm" data-icon="health_and_safety">health_and_safety</span>
+              Zero Downtime Migration
+            </div>
+</div>
+<div class="p-6 flex flex-col justify-between flex-grow">
+<div>
+<div class="flex items-center justify-between gap-2 mb-2">
+<span class="text-label-sm font-label-sm text-primary uppercase tracking-wider">Aplikasi Web Kustom</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="schedule">schedule</span> 10 Minggu
+                </span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors mb-2">
+                Medika Solusi Telehealth
+              </h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-6 leading-relaxed">
+                Migrasi infrastruktur lawas menuju HIPAA-compliant web app dengan enkripsi data end-to-end, antrean dokter real-time, dan integrasi resep elektronik instan.
+              </p>
+</div>
+<div>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-2 py-0.5 bg-surface-container-highest rounded text-label-sm font-label-sm text-on-surface">React</span>
+<span class="px-2 py-0.5 bg-surface-container-highest rounded text-label-sm font-label-sm text-on-surface">WebRTC</span>
+<span class="px-2 py-0.5 bg-surface-container-highest rounded text-label-sm font-label-sm text-on-surface">Node.js</span>
+<span class="px-2 py-0.5 bg-surface-container-highest rounded text-label-sm font-label-sm text-on-surface">PostgreSQL</span>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-white/[0.06]">
+<a class="inline-flex items-center gap-1.5 text-primary font-label-md font-semibold hover:underline" href="#">
+                  Lihat Studi Kasus
+                  <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+<a class="p-2 text-on-surface-variant hover:text-on-surface rounded-lg bg-surface-container-high/60 transition-colors" href="#">
+<span class="material-symbols-outlined text-base" data-icon="open_in_new">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- CASE STUDY 6: Arkara Edu Learning OS -->
+<div class="group bg-surface-container/70 backdrop-blur-md rounded-2xl border border-white/[0.08] hover:border-primary-container/50 hover:shadow-[0_20px_40px_-12px_rgba(15,23,42,0.5)] transition-all duration-300 flex flex-col justify-between overflow-hidden">
+<div class="relative bg-surface-container-lowest p-6 border-b border-white/[0.06]">
+<div class="relative rounded-lg overflow-hidden border border-white/10 aspect-[4/3] w-full">
+<img class="w-full h-full object-cover" data-alt="Modern interactive online learning management platform UI showcasing interactive course progression, video lecture playback, quiz leaderboards, and dark-mode glassmorphic student dashboards." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEfOjC0oa0srOLUhzvBiag4PsVO3tAy0KwIwwBaAWnRviQQQYg1W5AQJbnqrZ1m8l3dIcqd_Wzn41wrACoUzUujS3hBwlj8DL_ZxfSCuz9ajBy9VA0GvU_XXurTp4XulbtGruqbQOqPnQ4Nw8dFdH4Jvrt-EhvJPQ-OCAN2vP389c6Lnhn-_EV1xb8BwB8JErg7HzW1FOC43eg1Lotw2oZDwezTTNx2bxKCL-r-wbSkqvq588r82wNpw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent"></div>
+</div>
+<div class="absolute bottom-10 left-10 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-high/90 border border-primary-container/40 text-primary font-label-md font-semibold backdrop-blur-md">
+<span class="material-symbols-outlined text-sm" data-icon="group">group</span>
+              120k Monthly Active Users
+            </div>
+</div>
+<div class="p-6 flex flex-col justify-between flex-grow">
+<div>
+<div class="flex items-center justify-between gap-2 mb-2">
+<span class="text-label-sm font-label-sm text-primary uppercase tracking-wider">Aplikasi Web Kustom</span>
+<span class="text-label-sm font-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="schedule">schedule</span> 7 Minggu
+                </span>
+</div>
+<h3 class="text-headline-sm font-headline-sm text-on-surface group-hover:text-primary transition-colors mb-2">
+                Arkara Edu Learning OS
+              </h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-6 leading-relaxed">
+                Skalabilitas sistem ujian bersamaan tanpa server lag. Kami mengimplementasikan serverless autoscaling arsitektur dengan latency sub-100ms di seluruh Indonesia.
+              </p>
+</div>
+<div>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-2 py-0.5 bg-surface-container-highest rounded text-label-sm font-label-sm text-on-surface">Next.js 14</span>
+<span class="px-2 py-0.5 bg-surface-container-highest rounded text-label-sm font-label-sm text-on-surface">AWS Lambda</span>
+<span class="px-2 py-0.5 bg-surface-container-highest rounded text-label-sm font-label-sm text-on-surface">Supabase</span>
+</div>
+<div class="flex items-center justify-between pt-4 border-t border-white/[0.06]">
+<a class="inline-flex items-center gap-1.5 text-primary font-label-md font-semibold hover:underline" href="#">
+                  Lihat Studi Kasus
+                  <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</a>
+<a class="p-2 text-on-surface-variant hover:text-on-surface rounded-lg bg-surface-container-high/60 transition-colors" href="#">
+<span class="material-symbols-outlined text-base" data-icon="open_in_new">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. "MUAT LEBIH BANYAK" (LOAD MORE) INTERACTIVE SECTION -->
+<section class="pb-20 text-center max-w-7xl mx-auto px-6 lg:px-12">
+<div class="bg-surface-container-low/80 border border-white/[0.08] rounded-2xl p-8 max-w-2xl mx-auto backdrop-blur-md">
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-4">
+          Menampilkan <span class="text-on-surface font-semibold">6</span> dari <span class="text-on-surface font-semibold">24</span> proyek unggulan
+        </p>
+<!-- Progress Indicator Bar -->
+<div class="w-48 h-1.5 bg-surface-container-highest rounded-full mx-auto mb-6 overflow-hidden">
+<div class="w-1/4 h-full bg-primary-container rounded-full"></div>
+</div>
+<!-- Load More Button -->
+<button class="inline-flex items-center gap-2 bg-surface-container-high hover:bg-surface-variant border border-primary-container/30 text-on-surface hover:text-primary px-8 py-3.5 rounded-xl font-label-lg font-label-lg font-bold glow-pistachio-hover transition-all duration-200 active:scale-[0.98]">
+<span class="material-symbols-outlined" data-icon="expand_circle_down">expand_circle_down</span>
+          Muat Lebih Banyak Proyek (18)
+        </button>
+<p class="text-label-md font-label-md text-outline mt-4">
+          Mencari contoh proyek di industri spesifik Anda? <a class="text-primary hover:underline font-semibold" href="#kontak">Diskusikan dengan tim kami.</a>
+</p>
+</div>
+</section>
+<!-- 6. CLIENT COLLABORATION QUOTE / CASE STUDY HIGHLIGHT BANNER -->
+<section class="py-16 bg-surface-container-lowest border-y border-white/[0.06] relative overflow-hidden">
+<!-- Ambient Glow Behind Quote -->
+<div class="absolute -right-20 top-1/2 -translate-y-1/2 w-96 h-96 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-5xl mx-auto px-6 lg:px-12 relative z-10">
+<div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+<!-- Large Metric Accent Block -->
+<div class="shrink-0 bg-surface-container p-6 rounded-2xl border border-primary-container/30 text-center w-full md:w-64 glow-pistachio">
+<span class="material-symbols-outlined text-primary text-4xl mb-2" data-icon="auto_awesome">auto_awesome</span>
+<div class="text-headline-lg font-headline-lg text-primary tracking-tight font-bold">3.2x Lipat</div>
+<div class="text-label-md font-label-md text-on-surface-variant mt-1">Lonjakan Konversi Klien</div>
+<div class="mt-4 pt-4 border-t border-white/[0.08] text-label-sm font-label-sm text-outline">
+              Selesai dalam 4 Minggu Kerja
+            </div>
+</div>
+<!-- Quote & Client Info -->
+<div class="flex-grow">
+<div class="text-primary text-3xl font-serif mb-2">“</div>
+<blockquote class="text-headline-sm md:text-headline-md font-headline-md text-on-surface leading-snug mb-6">
+              “Dari konsep hingga go-live dalam 4 minggu dengan konversi melesat 3x lipat. CIPTA AKSARA TECH bukan sekadar vendor koding biasa—mereka adalah partner arsitektur digital sejati yang memahami KPI bisnis kami.”
+            </blockquote>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-primary-container shrink-0">
+<img class="w-full h-full object-cover" data-alt="Portrait of an Indonesian tech executive and CTO, professionally dressed in modern blazer against a subtle corporate office backdrop, smiling with confidence and leadership presence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2aPIEd5CEosHOjKgvAf3zDFSq_0-mAldbV_clL9M7I8V9OHz7Fum35yxMVOmu4K_7qB0-HAxUP9RM8rmQm42uohSxQ-8NuC43Zpwf_vrGn1cmMYiVZnZYyHGNC2jmV9juZnD6M18ZBu5JvyRSZaK6HDFqBXrl0H3-0bLxZdh9fE7gnY-MeUqO2AW010Kxp4B6QHWp9bmO-m4izPSaGm-F2Ec0fKPln0ttFOICpClU7tJyKxKRRGRXBw"/>
+</div>
+<div>
+<div class="text-label-lg font-label-lg font-bold text-on-surface">Bambang Wicaksono</div>
+<div class="text-label-md font-label-md text-on-surface-variant">Chief Technology Officer, FinAnSync Corporation</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. FINAL CONVERSION CTA BANNER -->
+<section class="py-24 relative overflow-hidden" id="kontak">
+<!-- Glow background halo -->
+<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(183,216,148,0.15),transparent_70%)] pointer-events-none"></div>
+<div class="max-w-5xl mx-auto px-6 lg:px-12 relative z-10 text-center">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-container/15 border border-primary-container/30 text-primary text-label-md font-label-md mb-6">
+<span class="material-symbols-outlined text-sm" data-icon="rocket_launch">rocket_launch</span>
+          Mulai Proyek Impian Anda
+        </div>
+<h2 class="text-display-hero-mobile md:text-headline-lg font-headline-lg text-on-surface tracking-tight max-w-3xl mx-auto mb-6">
+          Siap Membawa Bisnis Anda ke Level Digital yang Lebih Tinggi?
+        </h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl mx-auto mb-10 leading-relaxed">
+          Jadwalkan sesi konsultasi gratis 30 menit bersama Principal Engineer dan Lead Designer kami. Dapatkan audit arsitektur dan estimasi strategi yang terukur.
+        </p>
+<!-- Dual CTA Buttons -->
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-primary-container hover:bg-[#E0F8C7] text-surface font-label-lg font-bold px-8 py-4 rounded-xl glow-pistachio transition-all duration-200 active:scale-[0.98]" href="#">
+<span class="material-symbols-outlined text-surface" data-icon="calendar_month">calendar_month</span>
+<span>Jadwalkan Konsultasi Gratis</span>
+</a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-surface-container hover:bg-surface-container-high border border-primary-container/30 text-on-surface hover:text-primary font-label-lg font-bold px-8 py-4 rounded-xl transition-all duration-200 active:scale-[0.98]" href="https://wa.me/6281234567890" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-primary" data-icon="forum">forum</span>
+<span>Chat WhatsApp Tim Teknis</span>
+</a>
+</div>
+<div class="flex items-center justify-center gap-2 text-label-sm font-label-sm text-outline">
+<span class="material-symbols-outlined text-primary text-xs" data-icon="bolt">bolt</span>
+          Respons instan dalam waktu &lt; 15 menit pada jam operasional.
+        </div>
+</div>
+</section>
+</main>
+<!-- ======================================================== -->
+<!-- 8. GLOBAL FOOTER (Shared Component Anchor)                -->
+<!-- ======================================================== -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant/20 docked full-width">
+<div class="w-full px-6 lg:px-12 py-16 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
+<!-- Brand & Description Column (Span 2) -->
+<div class="lg:col-span-2 space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded bg-primary-container flex items-center justify-center text-surface">
+<span class="material-symbols-outlined text-surface text-lg font-bold" data-icon="terminal">terminal</span>
+</div>
+<span class="text-headline-sm font-headline-sm font-bold text-on-surface dark:text-on-surface">
+              CIPTA AKSARA TECH
+            </span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant max-w-sm leading-relaxed">
+            Agensi rekayasa perangkat lunak dan arsitektur website modern berstandar enterprise di Jakarta. Menghadirkan solusi digital berkinerja tinggi yang mendorong pertumbuhan bisnis nyata.
+          </p>
+<div class="flex items-center gap-3 pt-2">
+<a class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary border border-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-base" data-icon="code">code</span>
+</a>
+<a class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary border border-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-base" data-icon="share">share</span>
+</a>
+<a class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary border border-white/10 transition-colors" href="#">
+<span class="material-symbols-outlined text-base" data-icon="mail">mail</span>
+</a>
+</div>
+</div>
+<!-- Links Column 1: Layanan -->
+<div class="space-y-3">
+<div class="text-label-lg font-label-lg font-bold text-on-surface">Layanan Kami</div>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant font-body-sm hover:text-on-surface transition-colors duration-200" href="#">Layanan Web Development</a></li>
+<li><a class="text-on-surface-variant font-body-sm hover:text-on-surface transition-colors duration-200" href="#">Paket Pembuatan Website</a></li>
+<li><a class="text-on-surface-variant font-body-sm hover:text-on-surface transition-colors duration-200" href="#">Aplikasi Web Kustom</a></li>
+<li><a class="text-on-surface-variant font-body-sm hover:text-on-surface transition-colors duration-200" href="#">Audit &amp; Optimasi SEO</a></li>
+</ul>
+</div>
+<!-- Links Column 2: Portofolio & Legalitas -->
+<div class="space-y-3">
+<div class="text-label-lg font-label-lg font-bold text-on-surface">Eksplorasi</div>
+<ul class="space-y-2">
+<li><a class="text-primary font-body-sm font-medium" href="#">Portofolio Klien</a></li>
+<li><a class="text-on-surface-variant font-body-sm hover:text-on-surface transition-colors duration-200" href="#">Syarat &amp; Ketentuan</a></li>
+<li><a class="text-on-surface-variant font-body-sm hover:text-on-surface transition-colors duration-200" href="#">Kebijakan Privasi</a></li>
+<li><a class="text-on-surface-variant font-body-sm hover:text-on-surface transition-colors duration-200" href="#">Hubungi Tim</a></li>
+</ul>
+</div>
+<!-- Links Column 3: Kontak & Alamat -->
+<div class="space-y-3">
+<div class="text-label-lg font-label-lg font-bold text-on-surface">Kantor Operasional</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant leading-relaxed">
+            Cyber 2 Tower, Lantai 18<br/>
+            Jl. H. R. Rasuna Said Blok X-5<br/>
+            Jakarta Selatan, 12950
+          </p>
+<div class="text-body-sm font-body-sm text-primary pt-1">
+            halo@ciptaaksara.tech
+          </div>
+</div>
+</div>
+<!-- Copyright Separator -->
+<div class="pt-8 border-t border-outline-variant/20 flex flex-col sm:flex-row items-center justify-between gap-4">
+<p class="text-body-sm font-body-sm text-on-surface-variant text-center sm:text-left">
+          © 2025 CIPTA AKSARA TECH. Hak Cipta Dilindungi Undang-Undang.
+        </p>
+<div class="flex items-center gap-6 text-body-sm font-body-sm text-on-surface-variant">
+<span class="flex items-center gap-1.5 text-label-sm font-label-sm text-primary">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+            Semua Sistem Operasional Normal
+          </span>
+</div>
+</div>
+</div>
+</footer>
+<!-- ======================================================== -->
+<!-- FLOATING WHATSAPP BUTTON (Docked at bottom right)        -->
+<!-- ======================================================== -->
+<a class="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-[#25D366] text-surface font-label-md font-bold px-4 py-3 rounded-full shadow-2xl hover:scale-105 active:scale-95 transition-all duration-200 glow-pistachio" href="https://wa.me/6281234567890" rel="noopener noreferrer" target="_blank" title="Chat WhatsApp Cepat">
+<span class="material-symbols-outlined text-surface text-xl fill-icon" data-icon="chat" data-weight="fill">chat</span>
+<span class="hidden sm:inline text-surface font-bold">Konsultasi Instan</span>
+</a>
+</body></html>

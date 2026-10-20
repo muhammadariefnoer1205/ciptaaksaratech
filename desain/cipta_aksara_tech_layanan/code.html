@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Layanan Rekayasa Web &amp; Perangkat Lunak - CIPTA AKSARA TECH</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-secondary-container": "#adb8d6",
+            "surface-bright": "#323947",
+            "secondary-container": "#3e4962",
+            "surface-tint": "#b0d18d",
+            "on-secondary": "#253048",
+            "inverse-primary": "#4a662f",
+            "error": "#ffb4ab",
+            "on-primary-container": "#435f28",
+            "on-tertiary-fixed": "#0f2003",
+            "on-tertiary-fixed-variant": "#394c29",
+            "on-tertiary": "#233514",
+            "secondary-fixed-dim": "#bbc6e5",
+            "inverse-surface": "#dce2f4",
+            "tertiary-fixed-dim": "#b7cea0",
+            "tertiary": "#daf2c1",
+            "tertiary-container": "#bed5a6",
+            "outline-variant": "#44483d",
+            "primary-fixed-dim": "#b0d18d",
+            "error-container": "#93000a",
+            "surface-container-highest": "#2e3542",
+            "surface-variant": "#2e3542",
+            "on-background": "#dce2f4",
+            "surface-container-high": "#232a37",
+            "inverse-on-surface": "#2a313e",
+            "surface-container-low": "#151c28",
+            "surface-container": "#19202c",
+            "primary-container": "#b7d894",
+            "on-primary-fixed-variant": "#344e19",
+            "on-surface-variant": "#c4c8b9",
+            "on-error-container": "#ffdad6",
+            "on-primary-fixed": "#0e2000",
+            "primary": "#d3f5ae",
+            "secondary": "#bbc6e5",
+            "on-secondary-fixed": "#101b32",
+            "secondary-fixed": "#d8e2ff",
+            "surface": "#0c1320",
+            "primary-fixed": "#cceda7",
+            "on-tertiary-container": "#495d38",
+            "on-secondary-fixed-variant": "#3c4760",
+            "background": "#0c1320",
+            "outline": "#8e9285",
+            "tertiary-fixed": "#d2eaba",
+            "surface-dim": "#0c1320",
+            "surface-container-lowest": "#070e1a",
+            "on-surface": "#dce2f4",
+            "on-error": "#690005",
+            "on-primary": "#1e3704"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "3rem",
+            "gutter-mobile": "1rem",
+            "margin-mobile": "1.25rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2.5rem",
+            "space-md": "1rem",
+            "gutter": "1.5rem",
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem"
+          },
+          "fontFamily": {
+            "label-lg": ["Plus Jakarta Sans"],
+            "body-md": ["Inter"],
+            "body-sm": ["Inter"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "display-hero-mobile": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "body-lg": ["Inter"],
+            "display-hero": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+            "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }],
+            "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "display-hero-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "display-hero": ["56px", { "lineHeight": "68px", "letterSpacing": "-0.03em", "fontWeight": "800" }]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-background text-on-surface antialiased selection:bg-primary selection:text-on-primary">
+<!-- TOP APP BAR (Shared Component Anchor) -->
+<header class="docked full-width top-0 sticky z-50 bg-surface/85 backdrop-blur-md border-b border-outline-variant/30 shadow-sm">
+<div class="flex justify-between items-center w-full px-6 lg:px-12 max-w-7xl mx-auto h-20">
+<!-- Brand Logo / Wordmark -->
+<a class="flex items-center gap-3 group" href="#">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high border border-primary/20 flex items-center justify-center text-primary group-hover:border-primary transition-all duration-200">
+<span class="font-headline-sm text-headline-sm font-bold tracking-tighter">CA</span>
+</div>
+<span class="text-headline-sm font-headline-sm font-bold tracking-tight text-on-surface">CIPTA AKSARA TECH</span>
+</a>
+<!-- Desktop Navigation Links -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant font-label-lg hover:text-primary transition-colors duration-200" href="#">Beranda</a>
+<a class="text-primary font-label-lg font-semibold border-b-2 border-primary pb-1" href="#">Layanan</a>
+<a class="text-on-surface-variant font-label-lg hover:text-primary transition-colors duration-200" href="#">Portofolio</a>
+<a class="text-on-surface-variant font-label-lg hover:text-primary transition-colors duration-200" href="#">Paket Harga</a>
+<a class="text-on-surface-variant font-label-lg hover:text-primary transition-colors duration-200" href="#">Tentang</a>
+<a class="text-on-surface-variant font-label-lg hover:text-primary transition-colors duration-200" href="#">Kontak</a>
+</nav>
+<!-- Trailing Action -->
+<div class="flex items-center gap-4">
+<a class="inline-flex items-center gap-2 bg-primary-container text-on-primary font-label-lg px-5 py-2.5 rounded-lg font-semibold hover:bg-tertiary transition-all duration-200 active:scale-[0.98] shadow-[0_0_20px_rgba(183,216,148,0.25)]" href="#kontak-form">
+<span>Konsultasi Gratis</span>
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</a>
+</div>
+</div>
+</header>
+<!-- MAIN CONTAINER -->
+<main class="w-full relative overflow-hidden">
+<!-- Ambient Background Glows -->
+<div class="absolute top-10 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-primary/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+<div class="absolute top-[1800px] -right-40 w-[600px] h-[500px] bg-primary/5 rounded-full blur-[160px] pointer-events-none -z-10"></div>
+<!-- 1. COMPACT HERO SECTION -->
+<section class="max-w-7xl mx-auto px-6 lg:px-12 pt-12 pb-16">
+<!-- Breadcrumb -->
+<nav aria-label="Breadcrumb" class="flex items-center gap-2 font-label-md text-label-md text-on-surface-variant mb-6">
+<a class="hover:text-primary transition-colors" href="#">Beranda</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-primary font-semibold">Layanan</span>
+</nav>
+<div class="flex flex-col items-center text-center max-w-4xl mx-auto">
+<!-- Badge Pill -->
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary/10 border border-primary/25 text-primary text-label-md font-label-md mb-6">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+          Solusi Rekayasa Web &amp; Perangkat Lunak
+        </div>
+<!-- Headline -->
+<h1 class="text-headline-lg md:text-display-hero font-headline-lg md:font-display-hero text-on-surface mb-6 leading-tight">
+          Layanan Rekayasa Web Berstandar Industri untuk Akselerasi Bisnis Anda
+        </h1>
+<!-- Subtitle -->
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl mb-12">
+          Dari identitas korporat prestisius hingga aplikasi web kustom berskala enterprise, kami menggabungkan arsitektur kode modern, performa ultra-cepat, dan konversi terukur.
+        </p>
+<!-- Quick Stats Row (Bento Strip) -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 w-full bg-surface-container-high/80 border border-white/5 rounded-xl p-4 md:p-6 backdrop-blur-md shadow-lg">
+<div class="flex flex-col items-center justify-center p-3 text-center border-r border-outline-variant/20 last:border-0">
+<span class="text-headline-md font-headline-md font-bold text-primary">6</span>
+<span class="text-label-md font-label-md text-on-surface-variant mt-1">Layanan Utama</span>
+</div>
+<div class="flex flex-col items-center justify-center p-3 text-center border-r md:border-outline-variant/20 last:border-0">
+<span class="text-headline-sm font-headline-sm font-bold text-on-surface">100% Custom Code</span>
+<span class="text-label-md font-label-md text-on-surface-variant mt-1">Bukan Template Pasaran</span>
+</div>
+<div class="flex flex-col items-center justify-center p-3 text-center border-r border-outline-variant/20 last:border-0">
+<span class="text-headline-sm font-headline-sm font-bold text-on-surface">Garansi Penuh</span>
+<span class="text-label-md font-label-md text-on-surface-variant mt-1">Bug &amp; Pemeliharaan</span>
+</div>
+<div class="flex flex-col items-center justify-center p-3 text-center">
+<span class="text-headline-md font-headline-md font-bold text-primary flex items-center gap-1">
+              95+
+              <span class="material-symbols-outlined text-primary text-[20px]" data-weight="fill" style="font-variation-settings: 'FILL' 1;">speed</span>
+</span>
+<span class="text-label-md font-label-md text-on-surface-variant mt-1">Skor Google PageSpeed</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. ALTERNATING DETAILED SERVICE SECTIONS -->
+<section class="max-w-7xl mx-auto px-6 lg:px-12 py-12 flex flex-col gap-24">
+<!-- LAYANAN 1: Company Profile (Left text / Right visual) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<!-- Content Info -->
+<div class="lg:col-span-6 flex flex-col items-start">
+<div class="px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary font-label-sm text-label-sm mb-4">
+            01 • KREDIBILITAS KORPORAT
+          </div>
+<h2 class="text-headline-md font-headline-md text-on-surface mb-3">
+            Company Profile Premium &amp; Korporat
+          </h2>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6">
+            Membangun reputasi digital papan atas bagi institusi dan perusahaan terkemuka. Didesain secara bespoke untuk meyakinkan investor, mitra strategis, dan klien enterprise dengan waktu muat kilat di bawah 1.2 detik.
+          </p>
+<!-- Feature Bullets -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full mb-6">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-body-sm font-body-sm text-on-surface">Desain UI/UX Eksklusif Figma</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-body-sm font-body-sm text-on-surface">Arsitektur Multi-Device Fluid</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-body-sm font-body-sm text-on-surface">Optimasi SEO On-Page Mendalam</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-body-sm font-body-sm text-on-surface">CMS Headless Intuitif</span>
+</div>
+</div>
+<!-- Metadata Box -->
+<div class="flex flex-wrap items-center gap-4 p-3.5 rounded-lg bg-surface-container-high border border-white/5 w-full mb-6">
+<div>
+<span class="text-label-sm font-label-sm text-on-surface-variant block">Estimasi Pengerjaan:</span>
+<span class="text-label-md font-label-md text-on-surface font-semibold">2 - 3 Minggu</span>
+</div>
+<div class="h-8 w-px bg-outline-variant/30 hidden sm:block"></div>
+<div>
+<span class="text-label-sm font-label-sm text-on-surface-variant block">Teknologi Terpakai:</span>
+<span class="text-label-md font-label-md text-primary font-mono">Next.js 14, Tailwind CSS, Sanity / Strapi</span>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-wrap items-center gap-4">
+<a class="inline-flex items-center gap-2 bg-primary-container text-on-primary font-label-lg px-6 py-3 rounded-lg font-semibold hover:bg-tertiary transition-all active:scale-[0.98]" href="#kontak-form">
+<span>Minta Penawaran Layanan Ini</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="inline-flex items-center gap-2 text-on-surface hover:text-primary font-label-lg px-4 py-3 transition-colors" href="https://wa.me/6281234567890" target="_blank">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>Konsultasi via WhatsApp</span>
+</a>
+</div>
+</div>
+<!-- Glassmorphism Mockup Visual -->
+<div class="lg:col-span-6">
+<div class="relative bg-surface-container-highest/60 backdrop-blur-xl border border-white/10 rounded-2xl p-6 shadow-[0_20px_40px_-12px_rgba(15,23,42,0.5)] overflow-hidden">
+<!-- Ambient Card Glow -->
+<div class="absolute -right-12 -top-12 w-48 h-48 bg-primary/20 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Window Header Bar -->
+<div class="flex items-center justify-between pb-4 border-b border-white/10 mb-5">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-error/70"></span>
+<span class="w-3 h-3 rounded-full bg-yellow-500/70"></span>
+<span class="w-3 h-3 rounded-full bg-primary/70"></span>
+</div>
+<div class="text-label-sm font-mono text-on-surface-variant bg-surface-container-low px-3 py-1 rounded">
+                https://corporate-preview.ciptaaksara.id
+              </div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">lock</span>
+</div>
+<!-- Card Inner UI Mockup -->
+<div class="space-y-4">
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-container-low border border-white/5">
+<div>
+<p class="text-label-md font-label-md text-on-surface">Lighthouse Performance Metric</p>
+<p class="text-body-sm text-on-surface-variant">Audited on Desktop &amp; Mobile Device</p>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-12 h-12 rounded-full border-2 border-primary flex items-center justify-center font-bold text-primary font-mono text-sm">
+                    99
+                  </div>
+</div>
+</div>
+<!-- Metric Grid -->
+<div class="grid grid-cols-3 gap-3">
+<div class="p-3 rounded-lg bg-surface-container-low/80 border border-white/5">
+<span class="text-label-sm text-on-surface-variant">FCP</span>
+<p class="text-headline-sm font-headline-sm text-primary mt-1">0.6s</p>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low/80 border border-white/5">
+<span class="text-label-sm text-on-surface-variant">LCP</span>
+<p class="text-headline-sm font-headline-sm text-primary mt-1">0.9s</p>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low/80 border border-white/5">
+<span class="text-label-sm text-on-surface-variant">CLS</span>
+<p class="text-headline-sm font-headline-sm text-primary mt-1">0.00</p>
+</div>
+</div>
+<!-- Interactive Wireframe Component -->
+<div class="p-4 rounded-xl bg-surface-container border border-primary/20 space-y-2">
+<div class="h-3 w-1/3 bg-primary/40 rounded"></div>
+<div class="h-2 w-full bg-surface-bright rounded"></div>
+<div class="h-2 w-4/5 bg-surface-bright rounded"></div>
+<div class="flex gap-2 pt-2">
+<span class="h-6 w-16 bg-primary/20 rounded border border-primary/30"></span>
+<span class="h-6 w-20 bg-surface-bright rounded"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- LAYANAN 2: E-Commerce (Right text / Left visual) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<!-- Visual Mockup (Left on Desktop) -->
+<div class="lg:col-span-6 order-2 lg:order-1">
+<div class="relative bg-surface-container-highest/60 backdrop-blur-xl border border-white/10 rounded-2xl p-6 shadow-[0_20px_40px_-12px_rgba(15,23,42,0.5)]">
+<div class="flex items-center justify-between pb-4 border-b border-white/10 mb-4">
+<span class="text-label-md font-label-md text-primary font-mono">Checkout Pipeline &amp; Live Gateway</span>
+<span class="px-2 py-0.5 rounded text-label-sm bg-primary/20 text-primary">Active Socket</span>
+</div>
+<!-- Transaction Stack UI -->
+<div class="space-y-3">
+<div class="p-3.5 rounded-lg bg-surface-container-low border border-white/5 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-primary/10 border border-primary/30 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">qr_code_2</span>
+</div>
+<div>
+<p class="text-label-md font-label-md text-on-surface">QRIS &amp; Virtual Account Auto-Sync</p>
+<p class="text-label-sm text-on-surface-variant">Midtrans / Xendit Webhook Ready</p>
+</div>
+</div>
+<span class="text-label-sm text-primary font-mono font-semibold">99.98% Success</span>
+</div>
+<!-- Shipping Calculator Component -->
+<div class="p-3.5 rounded-lg bg-surface-container-low border border-white/5">
+<div class="flex justify-between text-body-sm text-on-surface mb-2">
+<span>Ekspedisi Terintegrasi:</span>
+<span class="text-primary font-semibold">RajaOngkir Pro API</span>
+</div>
+<div class="flex gap-2 text-label-sm">
+<span class="px-2.5 py-1 rounded bg-surface-container-high border border-white/10 text-on-surface">JNE Reg / YES</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high border border-white/10 text-on-surface">SiCepat Cargo</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high border border-white/10 text-on-surface">J&amp;T Express</span>
+</div>
+</div>
+<!-- Conversion Boost Indicator -->
+<div class="p-4 rounded-xl bg-surface-container border border-primary/30 flex items-center justify-between">
+<div>
+<span class="text-label-sm text-on-surface-variant block">Tingkat Drop-off Keranjang:</span>
+<span class="text-headline-sm font-headline-sm text-primary font-bold">Turun -38%</span>
+</div>
+<span class="material-symbols-outlined text-primary text-[32px]">trending_up</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Content Info (Right on Desktop) -->
+<div class="lg:col-span-6 order-1 lg:order-2 flex flex-col items-start">
+<div class="px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary font-label-sm text-label-sm mb-4">
+            02 • MONETISASI &amp; SKALABILITAS
+          </div>
+<h2 class="text-headline-md font-headline-md text-on-surface mb-3">
+            Toko Online &amp; E-Commerce Berperforma Tinggi
+          </h2>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6">
+            Kembangkan kanal penjualan langsung tanpa potongan komisi marketplace. Dilengkapi sistem checkout instan, integrasi multi-rekening otomatis, kalkulasi tarif kurir real-time, dan manajemen stok terpusat.
+          </p>
+<!-- Feature Bullets -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full mb-6">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-body-sm font-body-sm text-on-surface">Integrasi QRIS, VA &amp; E-Wallet</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-body-sm font-body-sm text-on-surface">Kalkulator Ongkir Otomatis</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-body-sm font-body-sm text-on-surface">Manajemen Multi-Varian &amp; Stok</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-body-sm font-body-sm text-on-surface">Notifikasi WhatsApp Order Bot</span>
+</div>
+</div>
+<!-- Metadata Box -->
+<div class="flex flex-wrap items-center gap-4 p-3.5 rounded-lg bg-surface-container-high border border-white/5 w-full mb-6">
+<div>
+<span class="text-label-sm font-label-sm text-on-surface-variant block">Estimasi Pengerjaan:</span>
+<span class="text-label-md font-label-md text-on-surface font-semibold">3 - 5 Minggu</span>
+</div>
+<div class="h-8 w-px bg-outline-variant/30 hidden sm:block"></div>
+<div>
+<span class="text-label-sm font-label-sm text-on-surface-variant block">Teknologi Terpakai:</span>
+<span class="text-label-md font-label-md text-primary font-mono">Next.js / Shopify Headless, MedusaJS, Node.js</span>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-wrap items-center gap-4">
+<a class="inline-flex items-center gap-2 bg-primary-container text-on-primary font-label-lg px-6 py-3 rounded-lg font-semibold hover:bg-tertiary transition-all active:scale-[0.98]" href="#kontak-form">
+<span>Minta Penawaran Layanan Ini</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="inline-flex items-center gap-2 text-on-surface hover:text-primary font-label-lg px-4 py-3 transition-colors" href="https://wa.me/6281234567890" target="_blank">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>Konsultasi via WhatsApp</span>
+</a>
+</div>
+</div>
+</div>
+<!-- LAYANAN 3: Landing Page (Left text / Right visual) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<!-- Content Info -->
+<div class="lg:col-span-6 flex flex-col items-start">
+<div class="px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary font-label-sm text-label-sm mb-4">
+            03 • AKUISISI &amp; TRAFIK
+          </div>
+<h2 class="text-headline-md font-headline-md text-on-surface mb-3">
+            High-Converting Landing Page
+          </h2>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6">
+            Landing page dengan arsitektur khusus untuk memaksimalkan ROI dari iklan berbayar Google Ads, TikTok Ads, dan Meta Ads. Dirancang dengan formula copywriting persuasif dan mikro-interaksi pemikat atensi.
+          </p>
+<!-- Feature Bullets -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full mb-6">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-body-sm font-body-sm text-on-surface">Formula Storytelling AIDA Teruji</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-body-sm font-body-sm text-on-surface">Integrasi Pixel Meta &amp; GA4 Event</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-body-sm font-body-sm text-on-surface">Skor Loading Sub-Detik (&lt;0.8s)</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-body-sm font-body-sm text-on-surface">A/B Testing Ready Setup</span>
+</div>
+</div>
+<!-- Metadata Box -->
+<div class="flex flex-wrap items-center gap-4 p-3.5 rounded-lg bg-surface-container-high border border-white/5 w-full mb-6">
+<div>
+<span class="text-label-sm font-label-sm text-on-surface-variant block">Estimasi Pengerjaan:</span>
+<span class="text-label-md font-label-md text-on-surface font-semibold">5 - 7 Hari Kerja</span>
+</div>
+<div class="h-8 w-px bg-outline-variant/30 hidden sm:block"></div>
+<div>
+<span class="text-label-sm font-label-sm text-on-surface-variant block">Teknologi Terpakai:</span>
+<span class="text-label-md font-label-md text-primary font-mono">Astro, Tailwind CSS, Vercel Edge</span>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-wrap items-center gap-4">
+<a class="inline-flex items-center gap-2 bg-primary-container text-on-primary font-label-lg px-6 py-3 rounded-lg font-semibold hover:bg-tertiary transition-all active:scale-[0.98]" href="#kontak-form">
+<span>Minta Penawaran Layanan Ini</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="inline-flex items-center gap-2 text-on-surface hover:text-primary font-label-lg px-4 py-3 transition-colors" href="https://wa.me/6281234567890" target="_blank">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>Konsultasi via WhatsApp</span>
+</a>
+</div>
+</div>
+<!-- Glassmorphism Funnel Visual -->
+<div class="lg:col-span-6">
+<div class="relative bg-surface-container-highest/60 backdrop-blur-xl border border-white/10 rounded-2xl p-6 shadow-[0_20px_40px_-12px_rgba(15,23,42,0.5)]">
+<div class="flex items-center justify-between pb-3 border-b border-white/10 mb-4">
+<span class="text-label-md font-label-md text-on-surface">Conversion Funnel Analytics</span>
+<span class="text-label-sm font-mono text-primary font-semibold">+148% Traffic</span>
+</div>
+<!-- Funnel Metric Steps -->
+<div class="space-y-3">
+<div class="p-3 rounded-lg bg-surface-container-low border border-white/5">
+<div class="flex justify-between text-body-sm mb-1">
+<span class="text-on-surface">Tahap 1: Impression to Click</span>
+<span class="text-primary font-mono">14.8% CTR</span>
+</div>
+<div class="w-full bg-surface-bright h-2 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[85%] rounded-full"></div>
+</div>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low border border-white/5">
+<div class="flex justify-between text-body-sm mb-1">
+<span class="text-on-surface">Tahap 2: Scroll Depth &gt; 75%</span>
+<span class="text-primary font-mono">72.4%</span>
+</div>
+<div class="w-full bg-surface-bright h-2 rounded-full overflow-hidden">
+<div class="bg-primary/80 h-full w-[72%] rounded-full"></div>
+</div>
+</div>
+<!-- Floating High-Conversion Tag -->
+<div class="p-4 rounded-xl bg-surface-container border border-primary/30 flex items-center justify-between">
+<div>
+<span class="text-label-sm text-on-surface-variant block">Conversion Boost Rerata:</span>
+<span class="text-headline-md font-headline-md text-primary font-extrabold">+42%</span>
+</div>
+<span class="px-3 py-1.5 rounded-full bg-primary/10 border border-primary/30 text-label-sm text-primary font-mono">Optimized Funnel</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- LAYANAN 4: Custom Web App & SaaS (Right text / Left visual) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<!-- Visual (Left on Desktop) -->
+<div class="lg:col-span-6 order-2 lg:order-1">
+<div class="relative bg-surface-container-highest/60 backdrop-blur-xl border border-white/10 rounded-2xl p-6 shadow-[0_20px_40px_-12px_rgba(15,23,42,0.5)]">
+<div class="flex items-center justify-between pb-3 border-b border-white/10 mb-4">
+<span class="text-label-md font-label-md text-on-surface">SaaS Engine &amp; Multi-Tenant Database</span>
+<span class="material-symbols-outlined text-primary text-[20px]">database</span>
+</div>
+<div class="space-y-3 font-mono text-label-sm">
+<!-- Code block preview -->
+<div class="p-4 rounded-lg bg-surface-container-low border border-white/5 text-on-surface-variant space-y-1">
+<p class="text-secondary"><span class="text-primary">interface</span> OrganizationTenant {</p>
+<p class="pl-4 text-on-surface">id: UUID;</p>
+<p class="pl-4 text-on-surface">roleBasedAccess: RBACMatrix;</p>
+<p class="pl-4 text-on-surface">apiRateLimits: <span class="text-primary">'enterprise-tier'</span>;</p>
+<p class="text-secondary">}</p>
+</div>
+<div class="grid grid-cols-2 gap-3 pt-2">
+<div class="p-3 rounded-lg bg-surface-container-low border border-white/5">
+<span class="text-on-surface-variant text-[11px] block">Latency Database</span>
+<span class="text-headline-sm font-headline-sm text-primary font-bold">&lt; 14ms</span>
+</div>
+<div class="p-3 rounded-lg bg-surface-container-low border border-white/5">
+<span class="text-on-surface-variant text-[11px] block">Role Permissions</span>
+<span class="text-headline-sm font-headline-sm text-on-surface font-bold">RBAC Layer</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Content Info (Right on Desktop) -->
+<div class="lg:col-span-6 order-1 lg:order-2 flex flex-col items-start">
+<div class="px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary font-label-sm text-label-sm mb-4">
+            04 • ARSITEKTUR KOMPLEKS
+          </div>
+<h2 class="text-headline-md font-headline-md text-on-surface mb-3">
+            Aplikasi Web Kustom &amp; SaaS Platform
+          </h2>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6">
+            Mendigitalkan alur kerja operasional perusahaan Anda ke dalam perangkat lunak web yang terstruktur. Dari portal klien aman, modul automasi keuangan, hingga platform langganan mandiri (SaaS).
+          </p>
+<!-- Feature Bullets -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full mb-6">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-body-sm font-body-sm text-on-surface">Sistem Otomasi Operasional Internal</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-body-sm font-body-sm text-on-surface">Portal Klien Aman &amp; Terproteksi</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-body-sm font-body-sm text-on-surface">Database Skalabal Multi-Tenant</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-body-sm font-body-sm text-on-surface">Integrasi Multi-API &amp; Webhook</span>
+</div>
+</div>
+<!-- Metadata Box -->
+<div class="flex flex-wrap items-center gap-4 p-3.5 rounded-lg bg-surface-container-high border border-white/5 w-full mb-6">
+<div>
+<span class="text-label-sm font-label-sm text-on-surface-variant block">Estimasi Pengerjaan:</span>
+<span class="text-label-md font-label-md text-on-surface font-semibold">6 - 12 Minggu</span>
+</div>
+<div class="h-8 w-px bg-outline-variant/30 hidden sm:block"></div>
+<div>
+<span class="text-label-sm font-label-sm text-on-surface-variant block">Teknologi Terpakai:</span>
+<span class="text-label-md font-label-md text-primary font-mono">React, Node.js, PostgreSQL, Docker, Redis</span>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-wrap items-center gap-4">
+<a class="inline-flex items-center gap-2 bg-primary-container text-on-primary font-label-lg px-6 py-3 rounded-lg font-semibold hover:bg-tertiary transition-all active:scale-[0.98]" href="#kontak-form">
+<span>Minta Penawaran Layanan Ini</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="inline-flex items-center gap-2 text-on-surface hover:text-primary font-label-lg px-4 py-3 transition-colors" href="https://wa.me/6281234567890" target="_blank">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>Konsultasi via WhatsApp</span>
+</a>
+</div>
+</div>
+</div>
+<!-- LAYANAN 5: Redesign & Modernisasi (Left text / Right visual) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<!-- Content Info -->
+<div class="lg:col-span-6 flex flex-col items-start">
+<div class="px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary font-label-sm text-label-sm mb-4">
+            05 • REVITALISASI SISTEM
+          </div>
+<h2 class="text-headline-md font-headline-md text-on-surface mb-3">
+            Redesign &amp; Modernisasi Website Lama
+          </h2>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6">
+            Ubah website lama yang lambat, kaku, dan rentan peretasan menjadi platform modern berestetika tinggi tanpa kehilangan peringkat kata kunci historis Google bisnis Anda.
+          </p>
+<!-- Feature Bullets -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full mb-6">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-body-sm font-body-sm text-on-surface">Pembersihan Technical Debt &amp; Bloat</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-body-sm font-body-sm text-on-surface">Preservasi SEO 301 Redirect Mapping</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-body-sm font-body-sm text-on-surface">Modern UI/UX Glassmorphic Standard</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-body-sm font-body-sm text-on-surface">Migrasi Database &amp; Konten Mulus</span>
+</div>
+</div>
+<!-- Metadata Box -->
+<div class="flex flex-wrap items-center gap-4 p-3.5 rounded-lg bg-surface-container-high border border-white/5 w-full mb-6">
+<div>
+<span class="text-label-sm font-label-sm text-on-surface-variant block">Estimasi Pengerjaan:</span>
+<span class="text-label-md font-label-md text-on-surface font-semibold">2 - 4 Minggu</span>
+</div>
+<div class="h-8 w-px bg-outline-variant/30 hidden sm:block"></div>
+<div>
+<span class="text-label-sm font-label-sm text-on-surface-variant block">Teknologi Terpakai:</span>
+<span class="text-label-md font-label-md text-primary font-mono">Modern Jamstack, Nuxt / Next, TypeScript</span>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-wrap items-center gap-4">
+<a class="inline-flex items-center gap-2 bg-primary-container text-on-primary font-label-lg px-6 py-3 rounded-lg font-semibold hover:bg-tertiary transition-all active:scale-[0.98]" href="#kontak-form">
+<span>Minta Penawaran Layanan Ini</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="inline-flex items-center gap-2 text-on-surface hover:text-primary font-label-lg px-4 py-3 transition-colors" href="https://wa.me/6281234567890" target="_blank">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>Konsultasi via WhatsApp</span>
+</a>
+</div>
+</div>
+<!-- Before & After Comparison Visual Card -->
+<div class="lg:col-span-6">
+<div class="relative bg-surface-container-highest/60 backdrop-blur-xl border border-white/10 rounded-2xl p-6 shadow-[0_20px_40px_-12px_rgba(15,23,42,0.5)]">
+<div class="flex items-center justify-between pb-3 border-b border-white/10 mb-4">
+<span class="text-label-md font-label-md text-on-surface">Before vs After Migration</span>
+<span class="px-2 py-0.5 rounded text-label-sm bg-primary/20 text-primary">Zero Downtime</span>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<!-- Old Architecture -->
+<div class="p-4 rounded-xl bg-surface-container-low border border-error/20 flex flex-col justify-between">
+<div>
+<span class="text-label-sm text-error font-semibold uppercase">Website Lama</span>
+<div class="mt-3 space-y-2">
+<div class="flex justify-between text-body-sm text-on-surface-variant">
+<span>Load Time:</span>
+<span class="text-error font-mono">4.8s</span>
+</div>
+<div class="flex justify-between text-body-sm text-on-surface-variant">
+<span>PageSpeed:</span>
+<span class="text-error font-mono">41 / 100</span>
+</div>
+<div class="flex justify-between text-body-sm text-on-surface-variant">
+<span>Mobile UX:</span>
+<span class="text-error font-mono">Broken</span>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-white/5 text-label-sm text-on-surface-variant">Legacy WP / Shared Host</div>
+</div>
+<!-- New Modernized Architecture -->
+<div class="p-4 rounded-xl bg-surface-container border border-primary/40 flex flex-col justify-between shadow-[0_0_20px_rgba(183,216,148,0.15)]">
+<div>
+<span class="text-label-sm text-primary font-semibold uppercase">Modern Stack</span>
+<div class="mt-3 space-y-2">
+<div class="flex justify-between text-body-sm text-on-surface">
+<span>Load Time:</span>
+<span class="text-primary font-mono font-bold">0.7s</span>
+</div>
+<div class="flex justify-between text-body-sm text-on-surface">
+<span>PageSpeed:</span>
+<span class="text-primary font-mono font-bold">98 / 100</span>
+</div>
+<div class="flex justify-between text-body-sm text-on-surface">
+<span>Mobile UX:</span>
+<span class="text-primary font-mono font-bold">Fluid 120Hz</span>
+</div>
+</div>
+</div>
+<div class="mt-4 pt-3 border-t border-white/5 text-label-sm text-primary font-semibold">Edge CDN / Serverless</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- LAYANAN 6: Pemeliharaan & SEO (Right text / Left visual) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<!-- Visual (Left on Desktop) -->
+<div class="lg:col-span-6 order-2 lg:order-1">
+<div class="relative bg-surface-container-highest/60 backdrop-blur-xl border border-white/10 rounded-2xl p-6 shadow-[0_20px_40px_-12px_rgba(15,23,42,0.5)]">
+<div class="flex items-center justify-between pb-3 border-b border-white/10 mb-4">
+<span class="text-label-md font-label-md text-on-surface">24/7 Health Sentinel &amp; Defense</span>
+<span class="flex items-center gap-1.5 text-label-sm text-primary">
+<span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+                Online 99.98%
+              </span>
+</div>
+<!-- Health Status Rows -->
+<div class="space-y-3">
+<div class="p-3.5 rounded-lg bg-surface-container-low border border-white/5 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[20px]">security</span>
+<div>
+<p class="text-label-md font-label-md text-on-surface">DDoS Shield &amp; Firewall WAF</p>
+<p class="text-label-sm text-on-surface-variant">Cloudflare Enterprise Proxy Guard</p>
+</div>
+</div>
+<span class="text-label-sm text-primary font-mono">Protected</span>
+</div>
+<div class="p-3.5 rounded-lg bg-surface-container-low border border-white/5 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[20px]">cloud_sync</span>
+<div>
+<p class="text-label-md font-label-md text-on-surface">Cloud Snapshot Otomatis</p>
+<p class="text-label-sm text-on-surface-variant">Snapshot harian disimpan terpisah</p>
+</div>
+</div>
+<span class="text-label-sm text-on-surface-variant font-mono">Daily 03:00 WIB</span>
+</div>
+<div class="p-3.5 rounded-lg bg-surface-container-low border border-white/5 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[20px]">manage_search</span>
+<div>
+<p class="text-label-md font-label-md text-on-surface">Search Console Audit</p>
+<p class="text-label-sm text-on-surface-variant">0 Indexing Errors, 100% Core Web Vitals</p>
+</div>
+</div>
+<span class="text-label-sm text-primary font-mono">Clean</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Content Info (Right on Desktop) -->
+<div class="lg:col-span-6 order-1 lg:order-2 flex flex-col items-start">
+<div class="px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary font-label-sm text-label-sm mb-4">
+            06 • KEAMANAN &amp; KELANGSUNGAN
+          </div>
+<h2 class="text-headline-md font-headline-md text-on-surface mb-3">
+            Pemeliharaan Berkala, Keamanan &amp; SEO On-Page
+          </h2>
+<p class="text-body-md font-body-md text-on-surface-variant mb-6">
+            Bebaskan fokus tim Anda dari kerumitan teknis server, bug tak terduga, dan ancaman malware. Kami mengawal ketersediaan website Anda 24 jam sehari dengan SLA respons cepat.
+          </p>
+<!-- Feature Bullets -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full mb-6">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-body-sm font-body-sm text-on-surface">Monitoring Uptime 99.9% Real-Time</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-body-sm font-body-sm text-on-surface">Pembaruan Security Patch &amp; SSL</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-body-sm font-body-sm text-on-surface">Backup Otomatis Cloud Terenkripsi</span>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-body-sm font-body-sm text-on-surface">Alokasi Update Konten Bulanan</span>
+</div>
+</div>
+<!-- Metadata Box -->
+<div class="flex flex-wrap items-center gap-4 p-3.5 rounded-lg bg-surface-container-high border border-white/5 w-full mb-6">
+<div>
+<span class="text-label-sm font-label-sm text-on-surface-variant block">Model Retainer:</span>
+<span class="text-label-md font-label-md text-on-surface font-semibold">Bulanan / Tahunan</span>
+</div>
+<div class="h-8 w-px bg-outline-variant/30 hidden sm:block"></div>
+<div>
+<span class="text-label-sm font-label-sm text-on-surface-variant block">Teknologi Terpakai:</span>
+<span class="text-label-md font-label-md text-primary font-mono">UptimeKuma, Cloudflare WAF, AWS S3</span>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-wrap items-center gap-4">
+<a class="inline-flex items-center gap-2 bg-primary-container text-on-primary font-label-lg px-6 py-3 rounded-lg font-semibold hover:bg-tertiary transition-all active:scale-[0.98]" href="#kontak-form">
+<span>Minta Penawaran Layanan Ini</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="inline-flex items-center gap-2 text-on-surface hover:text-primary font-label-lg px-4 py-3 transition-colors" href="https://wa.me/6281234567890" target="_blank">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>Konsultasi via WhatsApp</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. TRUST GUARANTEE STRIP -->
+<section class="max-w-7xl mx-auto px-6 lg:px-12 py-16">
+<div class="bg-surface-container-high/90 border border-white/5 rounded-2xl p-8 lg:p-12 shadow-xl">
+<div class="text-center max-w-2xl mx-auto mb-10">
+<div class="px-3.5 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-label-md font-label-md inline-block mb-3">
+            Jaminan Standar Rekayasa
+          </div>
+<h2 class="text-headline-md font-headline-md text-on-surface">
+            Standar Kualitas di Setiap Layanan Kami
+          </h2>
+<p class="text-body-md font-body-md text-on-surface-variant mt-2">
+            Setiap baris kode dan komponen visual yang kami serahkan telah melalui serangkaian pengujian ketat sebelum masuk ke lingkungan produksi.
+          </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="p-6 rounded-xl bg-surface-container border border-white/5 hover:border-primary/40 transition-all">
+<span class="material-symbols-outlined text-primary text-[32px] mb-3">code</span>
+<h3 class="text-headline-sm font-headline-sm text-on-surface mb-2">Kode Bersih &amp; Modular</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+              Mengikuti standar TypeScript dan linting modern sehingga memudahkan pengembangan fitur di masa depan oleh tim manapun.
+            </p>
+</div>
+<div class="p-6 rounded-xl bg-surface-container border border-white/5 hover:border-primary/40 transition-all">
+<span class="material-symbols-outlined text-primary text-[32px] mb-3">description</span>
+<h3 class="text-headline-sm font-headline-sm text-on-surface mb-2">Dokumentasi Lengkap</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+              Panduan penggunaan, konfigurasi credential server, dan arsitektur database kami serahkan secara transparan 100%.
+            </p>
+</div>
+<div class="p-6 rounded-xl bg-surface-container border border-white/5 hover:border-primary/40 transition-all">
+<span class="material-symbols-outlined text-primary text-[32px] mb-3">verified_user</span>
+<h3 class="text-headline-sm font-headline-sm text-on-surface mb-2">Garansi Bug Pasca-Rilis</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+              Jaminan perbaikan bug gratis hingga 60 hari setelah website diluncurkan untuk memastikan stabilitas mutlak.
+            </p>
+</div>
+<div class="p-6 rounded-xl bg-surface-container border border-white/5 hover:border-primary/40 transition-all">
+<span class="material-symbols-outlined text-primary text-[32px] mb-3">groups</span>
+<h3 class="text-headline-sm font-headline-sm text-on-surface mb-2">Grup WhatsApp Khusus</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+              Komunikasi langsung tanpa birokrasi ticketing bersama Project Manager dan Technical Lead proyek Anda.
+            </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. FINAL CONVERSION CTA BANNER -->
+<section class="max-w-7xl mx-auto px-6 lg:px-12 py-16" id="kontak-form">
+<div class="relative rounded-3xl bg-surface-container-high border border-primary/30 p-8 md:p-16 overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+<!-- Glow Backdrops -->
+<div class="absolute -right-20 -bottom-20 w-96 h-96 bg-primary/20 rounded-full blur-[100px] pointer-events-none"></div>
+<div class="absolute -left-20 -top-20 w-80 h-80 bg-secondary/15 rounded-full blur-[90px] pointer-events-none"></div>
+<div class="relative z-10 max-w-3xl mx-auto text-center">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary/10 border border-primary/25 text-primary text-label-md font-label-md mb-6">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+            Sesi Diskusi Solusi Teknis
+          </div>
+<h2 class="text-headline-lg font-headline-lg text-on-surface mb-4">
+            Belum Yakin Layanan Mana yang Paling Tepat untuk Bisnis Anda?
+          </h2>
+<p class="text-body-lg font-body-lg text-on-surface-variant mb-10">
+            Diskusikan roadmap digital Anda bersama tim Principal Engineer dan Lead Designer kami. Konsultasi gratis 30 menit tanpa komitmen.
+          </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-primary-container text-on-primary font-label-lg px-8 py-4 rounded-xl font-bold hover:bg-tertiary transition-all active:scale-[0.98] shadow-[0_0_24px_rgba(183,216,148,0.35)]" href="https://wa.me/6281234567890?text=Halo%20Cipta%20Aksara%20Tech,%20saya%20ingin%20jadwalkan%20konsultasi%20layanan" target="_blank">
+<span>Jadwalkan Konsultasi Gratis</span>
+<span class="material-symbols-outlined text-[20px]">calendar_today</span>
+</a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-surface-container border border-primary/30 text-on-surface hover:text-primary hover:border-primary font-label-lg px-8 py-4 rounded-xl font-semibold transition-all" href="https://wa.me/6281234567890" target="_blank">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>Chat WhatsApp Tim Teknis</span>
+</a>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant/70 mt-6">
+            Respons instan dalam waktu &lt; 15 menit pada jam kerja (09.00 - 18.00 WIB)
+          </p>
+</div>
+</div>
+</section>
+</main>
+<!-- FLOATING WHATSAPP BUTTON -->
+<aside class="fixed bottom-8 right-8 z-50">
+<a aria-label="Konsultasi WhatsApp" class="flex items-center gap-2 bg-primary text-on-primary px-4 py-3 rounded-full font-label-lg shadow-[0_4px_24px_rgba(183,216,148,0.4)] hover:bg-tertiary transition-transform duration-200 active:scale-95 group" href="https://wa.me/6281234567890" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[24px]">chat</span>
+<span class="font-bold hidden sm:inline">Tanya Teknis</span>
+</a>
+</aside>
+<!-- FOOTER (Shared Component Anchor) -->
+<footer class="docked full-width bg-surface-container-lowest border-t border-outline-variant/20">
+<div class="w-full px-6 lg:px-12 py-16 max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-outline-variant/20">
+<!-- Brand / Identity Column -->
+<div class="lg:col-span-2">
+<a class="flex items-center gap-3 mb-4" href="#">
+<div class="w-8 h-8 rounded bg-surface-container-high border border-primary/20 flex items-center justify-center text-primary">
+<span class="font-headline-sm text-headline-sm font-bold">CA</span>
+</div>
+<span class="text-headline-sm font-headline-sm font-bold text-on-surface">CIPTA AKSARA TECH</span>
+</a>
+<p class="text-body-sm font-body-sm text-on-surface-variant max-w-sm mb-6">
+            Agensi rekayasa perangkat lunak dan pengembangan web performa tinggi untuk korporasi, startup, dan brand visioner di Indonesia.
+          </p>
+<div class="flex items-center gap-3 text-on-surface-variant">
+<a class="w-9 h-9 rounded-lg bg-surface-container-high border border-white/5 flex items-center justify-center hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">public</span>
+</a>
+<a class="w-9 h-9 rounded-lg bg-surface-container-high border border-white/5 flex items-center justify-center hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+</a>
+<a class="w-9 h-9 rounded-lg bg-surface-container-high border border-white/5 flex items-center justify-center hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">forum</span>
+</a>
+</div>
+</div>
+<!-- Links Column 1: Layanan -->
+<div>
+<h4 class="text-label-md font-label-md text-on-surface font-semibold uppercase tracking-wider mb-4">
+            Layanan Utama
+          </h4>
+<ul class="space-y-3 font-body-sm text-body-sm">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Company Profile Korporat</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">E-Commerce &amp; Toko Online</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">High-Converting Landing Page</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Aplikasi Web &amp; SaaS</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">Modernisasi Website Lama</a></li>
+</ul>
+</div>
+<!-- Links Column 2: Navigasi Shared Links -->
+<div>
+<h4 class="text-label-md font-label-md text-on-surface font-semibold uppercase tracking-wider mb-4">
+            Eksplorasi
+          </h4>
+<ul class="space-y-3 font-body-sm text-body-sm">
+<li><a class="text-primary font-body-sm font-medium" href="#">Layanan Web Development</a></li>
+<li><a class="text-on-surface-variant font-body-sm hover:text-on-surface transition-colors duration-200" href="#">Paket Pembuatan Website</a></li>
+<li><a class="text-on-surface-variant font-body-sm hover:text-on-surface transition-colors duration-200" href="#">Portofolio Klien</a></li>
+<li><a class="text-on-surface-variant font-body-sm hover:text-on-surface transition-colors duration-200" href="#">Syarat &amp; Ketentuan</a></li>
+<li><a class="text-on-surface-variant font-body-sm hover:text-on-surface transition-colors duration-200" href="#">Kebijakan Privasi</a></li>
+<li><a class="text-on-surface-variant font-body-sm hover:text-on-surface transition-colors duration-200" href="#">Hubungi Tim</a></li>
+</ul>
+</div>
+<!-- Links Column 3: Newsletter & Tech Advisory -->
+<div>
+<h4 class="text-label-md font-label-md text-on-surface font-semibold uppercase tracking-wider mb-4">
+            Wawasan Teknologi
+          </h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant mb-3">
+            Dapatkan wawasan arsitektur web dan tren konversi terbaru sebulan sekali.
+          </p>
+<form class="space-y-2" onsubmit="event.preventDefault();">
+<input class="w-full bg-surface-container border border-white/10 rounded-lg px-3.5 py-2 text-body-sm text-on-surface placeholder:text-on-surface-variant/50 focus:border-primary focus:ring-1 focus:ring-primary/20 outline-none" placeholder="nama@perusahaan.com" type="email"/>
+<button class="w-full bg-surface-container-high hover:bg-primary/20 hover:text-primary text-on-surface font-label-md py-2 px-4 rounded-lg border border-white/10 transition-colors" type="submit">
+              Langganan
+            </button>
+</form>
+</div>
+</div>
+<!-- Bottom Bar -->
+<div class="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-body-sm font-body-sm text-on-surface-variant">
+<p>© 2025 CIPTA AKSARA TECH. Hak Cipta Dilindungi Undang-Undang.</p>
+<div class="flex items-center gap-6">
+<span class="flex items-center gap-1.5 text-label-sm">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+            Semua Sistem Operasional Normal
+          </span>
+<span class="text-label-sm font-mono text-outline">Jakarta, ID</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
