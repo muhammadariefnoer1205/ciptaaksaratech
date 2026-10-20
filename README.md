@@ -34,7 +34,13 @@ src/
     CtaBanner.jsx, Footer.jsx, FloatingWa.jsx
 ```
 
-## Section (sesuai desain)
+## Routing
+
+- `/` — Homepage (semua section lama)
+- `/layanan` — Halaman Layanan detail (hero + breadcrumb + 6 layanan selang-seling + garansi + CTA)
+
+Navigasi memakai `react-router-dom`. Menu **Layanan** membuka `/layanan`; menu section lain (Beranda, Portofolio, Paket Harga, Tentang, Kontak) kembali ke `/` lalu smooth-scroll ke section terkait.
+
 
 1. Sticky Navbar + mobile drawer
 2. Hero + badge, dual CTA, trust badges, mockup + floating chips

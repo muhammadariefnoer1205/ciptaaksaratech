@@ -1,18 +1,31 @@
 import { useState } from 'react'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import { Icon, Logo } from './ui.jsx'
+import { scrollToId } from './Navbar.jsx'
 
 const LAYANAN = ['Layanan Web Development', 'Paket Pembuatan Website', 'Toko Online E-Commerce', 'Aplikasi Web Kustom']
 const PERUSAHAAN = [
-  { label: 'Portofolio Klien', href: '#portofolio' },
-  { label: 'Tentang Kami', href: '#tentang' },
-  { label: 'Syarat & Ketentuan', href: '#' },
-  { label: 'Kebijakan Privasi', href: '#' },
-  { label: 'Hubungi Tim', href: '#kontak' }
+  { label: 'Portofolio Klien', section: 'portofolio' },
+  { label: 'Tentang Kami', section: 'tentang' },
+  { label: 'Syarat & Ketentuan', section: null },
+  { label: 'Kebijakan Privasi', section: null },
+  { label: 'Hubungi Tim', section: 'kontak' }
 ]
 
 export default function Footer() {
   const [email, setEmail] = useState('')
   const [done, setDone] = useState(false)
+  const location = useLocation()
+  const navigate = useNavigate()
+
+  const goSection = (id) => {
+    if (location.pathname !== '/') {
+      navigate('/')
+      setTimeout(() => scrollToId(id), 150)
+    } else {
+      scrollToId(id)
+    }
+  }
 
   return (
     <footer className="bg-surface-container-lowest border-t border-outline-variant/20">
@@ -34,13 +47,13 @@ export default function Footer() {
           <div className="lg:col-span-2 space-y-4">
             <h4 className="text-label-md font-bold text-on-surface uppercase tracking-wider">Layanan</h4>
             <ul className="space-y-2.5">
-              {LAYANAN.map((l) => (<li key={l}><a className="text-on-surface-variant text-body-sm hover:text-on-surface" href="#layanan">{l}</a></li>))}
+              {LAYANAN.map((l) => (<li key={l}><Link className="text-on-surface-variant text-body-sm hover:text-on-surface" to="/layanan">{l}</Link></li>))}
             </ul>
           </div>
           <div className="lg:col-span-2 space-y-4">
             <h4 className="text-label-md font-bold text-on-surface uppercase tracking-wider">Perusahaan</h4>
             <ul className="space-y-2.5">
-              {PERUSAHAAN.map((l) => (<li key={l.label}><a className="text-on-surface-variant text-body-sm hover:text-on-surface" href={l.href}>{l.label}</a></li>))}
+              {PERUSAHAAN.map((l) => (<li key={l.label}>{l.section ? (<button className="text-on-surface-variant text-body-sm hover:text-on-surface" onClick={() => goSection(l.section)}>{l.label}</button>) : (<span className="text-on-surface-variant text-body-sm">{l.label}</span>)}</li>))}
             </ul>
           </div>
           <div className="lg:col-span-3 space-y-4">

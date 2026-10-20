@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { SERVICES } from '../data/services.js'
 import { Icon, SectionBadge } from './ui.jsx'
 
@@ -27,10 +28,10 @@ export default function Services() {
               <h3 className="text-headline-sm font-headline-sm text-on-surface mb-3">{s.title}</h3>
               <p className="text-body-sm font-body-sm text-on-surface-variant leading-relaxed">{s.desc}</p>
             </div>
-            <a className="inline-flex items-center gap-1.5 text-label-md font-semibold text-primary-container hover:underline mt-6" href="#kontak">
+            <Link className="inline-flex items-center gap-1.5 text-label-md font-semibold text-primary-container hover:underline mt-6" to="/layanan">
               <span>Pelajari lebih lanjut</span>
               <Icon name="arrow_forward" className="text-[16px]" />
-            </a>
+            </Link>
           </div>
         ))}
       </div>
