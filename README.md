@@ -38,6 +38,7 @@ src/
 
 - `/` — Homepage (semua section lama)
 - `/layanan` — Halaman Layanan detail (hero + breadcrumb + 6 layanan selang-seling + garansi + CTA)
+- `/portofolio` — Halaman Portofolio (hero + metrik + filter chips + 6 studi kasus + load more + quote + CTA)
 
 Navigasi memakai `react-router-dom`. Menu **Layanan** membuka `/layanan`; menu section lain (Beranda, Portofolio, Paket Harga, Tentang, Kontak) kembali ke `/` lalu smooth-scroll ke section terkait.
 

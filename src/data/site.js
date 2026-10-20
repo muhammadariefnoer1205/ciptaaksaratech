@@ -5,7 +5,7 @@ export const WA_CHAT_URL = `https://wa.me/${WA_NUMBER}`
 export const NAV_LINKS = [
   { label: 'Beranda', to: '/', hash: '#beranda', section: 'beranda' },
   { label: 'Layanan', to: '/layanan' },
-  { label: 'Portofolio', to: '/', hash: '#portofolio', section: 'portofolio' },
+  { label: 'Portofolio', to: '/portofolio' },
   { label: 'Paket Harga', to: '/', hash: '#paket-harga', section: 'paket-harga' },
   { label: 'Tentang', to: '/', hash: '#tentang', section: 'tentang' },
   { label: 'Kontak', to: '/', hash: '#kontak', section: 'kontak' }

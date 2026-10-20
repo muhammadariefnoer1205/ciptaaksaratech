@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { PORTFOLIO_IMAGE } from '../data/site.js'
 import { Icon, SectionBadge } from './ui.jsx'
 
@@ -14,9 +15,9 @@ export default function Portfolio() {
           <SectionBadge>PORTOFOLIO PILIHAN</SectionBadge>
           <h2 className="text-headline-lg-mobile md:text-headline-lg font-headline-lg mt-4">Karya Nyata yang Menghasilkan Dampak Nyata</h2>
         </div>
-        <a className="inline-flex items-center gap-2 text-label-lg font-bold text-primary-container hover:text-primary" href="#kontak">
+        <Link className="inline-flex items-center gap-2 text-label-lg font-bold text-primary-container hover:text-primary" to="/portofolio">
           <span>Lihat Semua Proyek (24+)</span><Icon name="arrow_forward" className="text-[18px]" />
-        </a>
+        </Link>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         <div className="lg:col-span-7 group rounded-3xl bg-surface-container/70 border border-white/5 overflow-hidden hover:border-primary-container/40 transition-all">

@@ -5,7 +5,7 @@ import { scrollToId } from './Navbar.jsx'
 
 const LAYANAN = ['Layanan Web Development', 'Paket Pembuatan Website', 'Toko Online E-Commerce', 'Aplikasi Web Kustom']
 const PERUSAHAAN = [
-  { label: 'Portofolio Klien', section: 'portofolio' },
+  { label: 'Portofolio Klien', to: '/portofolio' },
   { label: 'Tentang Kami', section: 'tentang' },
   { label: 'Syarat & Ketentuan', section: null },
   { label: 'Kebijakan Privasi', section: null },
@@ -53,7 +53,7 @@ export default function Footer() {
           <div className="lg:col-span-2 space-y-4">
             <h4 className="text-label-md font-bold text-on-surface uppercase tracking-wider">Perusahaan</h4>
             <ul className="space-y-2.5">
-              {PERUSAHAAN.map((l) => (<li key={l.label}>{l.section ? (<button className="text-on-surface-variant text-body-sm hover:text-on-surface" onClick={() => goSection(l.section)}>{l.label}</button>) : (<span className="text-on-surface-variant text-body-sm">{l.label}</span>)}</li>))}
+              {PERUSAHAAN.map((l) => (<li key={l.label}>{l.to ? (<Link className="text-on-surface-variant text-body-sm hover:text-on-surface" to={l.to}>{l.label}</Link>) : l.section ? (<button className="text-on-surface-variant text-body-sm hover:text-on-surface" onClick={() => goSection(l.section)}>{l.label}</button>) : (<span className="text-on-surface-variant text-body-sm">{l.label}</span>)}</li>))}
             </ul>
           </div>
           <div className="lg:col-span-3 space-y-4">
