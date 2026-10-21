@@ -34,3 +34,18 @@ body {
 details summary::-webkit-details-marker {
   display: none;
 }
+
+/* Paket Harga page aesthetics (glass + glow, from original design) */
+.glass-card {
+  background: rgba(35, 42, 55, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+.glass-nav {
+  background: rgba(21, 28, 40, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+.glow-accent {
+  box-shadow: 0 0 35px -8px rgba(183, 216, 148, 0.35);
+}

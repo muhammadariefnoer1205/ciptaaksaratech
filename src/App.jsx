@@ -5,6 +5,7 @@ import FloatingWa from './components/FloatingWa.jsx'
 import HomePage from './pages/HomePage.jsx'
 import LayananPage from './pages/LayananPage.jsx'
 import PortofolioPage from './pages/PortofolioPage.jsx'
+import HargaPage from './pages/HargaPage.jsx'
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
         />
         <Route path="/layanan" element={<LayananPage />} />
         <Route path="/portofolio" element={<PortofolioPage />} />
+        <Route path="/paket-harga" element={<HargaPage />} />
         <Route path="*" element={<LayananPage />} />
       </Routes>
     </BrowserRouter>

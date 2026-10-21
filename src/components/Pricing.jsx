@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { PRICING } from '../data/pricing.js'
 import { Icon, SectionBadge } from './ui.jsx'
 
@@ -33,19 +34,19 @@ export default function Pricing() {
                 ))}
               </ul>
             </div>
-            <a href="#kontak" className={p.featured
+            <Link to="/paket-harga" className={p.featured
               ? 'w-full text-center py-3.5 px-4 rounded-xl bg-primary-container text-[#0F172A] font-label-lg font-bold hover:bg-primary shadow-lg'
               : 'w-full text-center py-3.5 px-4 rounded-xl bg-surface-variant font-label-lg font-semibold border border-outline-variant/40 hover:border-primary-container/60 hover:text-primary'}>
               {p.cta}
-            </a>
+            </Link>
           </div>
         ))}
       </div>
       <div className="text-center mt-12">
-        <a className="inline-flex items-center gap-2 text-label-lg text-on-surface-variant hover:text-primary" href="#kontak">
+        <Link className="inline-flex items-center gap-2 text-label-lg text-on-surface-variant hover:text-primary" to="/paket-harga">
           <span>Butuh solusi dengan spesifikasi khusus? Minta penawaran kustom</span>
           <Icon name="arrow_forward" className="text-[18px]" />
-        </a>
+        </Link>
       </div>
     </section>
   )

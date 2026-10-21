@@ -10,7 +10,7 @@ export function scrollToId(id) {
   })
 }
 
-const ROUTES = ['/layanan', '/portofolio']
+const ROUTES = ['/layanan', '/portofolio', '/paket-harga']
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)
