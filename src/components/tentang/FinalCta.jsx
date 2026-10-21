@@ -1,3 +1,4 @@
+import { WA_CHAT_URL, WA_CONSULT_URL } from '../../data/site.js'
 import { Icon } from '../ui.jsx'
 
 export default function FinalCta() {
@@ -19,11 +20,11 @@ export default function FinalCta() {
             Konsultasikan arsitektur teknis dan kebutuhan produk Anda bersama Principal Engineer kami dalam sesi 30 menit gratis tanpa kewajiban komersial.
           </p>
           <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a className="w-full sm:w-auto inline-flex items-center justify-center gap-2 font-label-lg text-label-lg font-bold bg-primary-container text-on-primary-container px-8 py-3.5 rounded-lg shadow-md hover:bg-primary transition-all duration-200 active:scale-95 glow-pistachio" href="#">
+            <a className="w-full sm:w-auto inline-flex items-center justify-center gap-2 font-label-lg text-label-lg font-bold bg-primary-container text-on-primary-container px-8 py-3.5 rounded-lg shadow-md hover:bg-primary transition-all duration-200 active:scale-95 glow-pistachio" href={WA_CONSULT_URL} target="_blank" rel="noreferrer">
               <span className="material-symbols-outlined text-xl fill-icon">calendar_month</span>
               <span>Jadwalkan Konsultasi Gratis</span>
             </a>
-            <a className="w-full sm:w-auto inline-flex items-center justify-center gap-2 font-label-lg text-label-lg font-semibold bg-surface-container-highest/80 border border-primary/30 text-on-surface px-8 py-3.5 rounded-lg hover:border-primary hover:text-primary transition-all duration-200 active:scale-95" href="#">
+            <a className="w-full sm:w-auto inline-flex items-center justify-center gap-2 font-label-lg text-label-lg font-semibold bg-surface-container-highest/80 border border-primary/30 text-on-surface px-8 py-3.5 rounded-lg hover:border-primary hover:text-primary transition-all duration-200 active:scale-95" href={WA_CHAT_URL} target="_blank" rel="noreferrer">
               <span className="material-symbols-outlined text-xl text-primary fill-icon">chat</span>
               <span>Chat WhatsApp Tim Teknis</span>
             </a>

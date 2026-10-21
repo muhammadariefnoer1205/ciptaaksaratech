@@ -7,7 +7,7 @@ export default function VisiMisi() {
       <div className="text-center max-w-2xl mx-auto mb-16">
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary font-label-md text-label-md mb-3">
           <span className="material-symbols-outlined text-sm">explore</span>
-          <span>Arah &amp; Tujuan Kami</span>
+          <span>Arah & Tujuan Kami</span>
         </div>
         <h2 className="font-headline-lg text-headline-lg font-bold text-on-surface tracking-tight">
           Fondasi Strategis Menuju Masa Depan Digital

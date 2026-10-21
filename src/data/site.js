@@ -1,4 +1,4 @@
-export const WA_NUMBER = '6281234567890'
+export const WA_NUMBER = '6285179980594'
 export const WA_CONSULT_URL = `https://wa.me/${WA_NUMBER}?text=Halo%20Cipta%20Aksara%20Tech,%20saya%20ingin%20konsultasi%20pembuatan%20website`
 export const WA_CHAT_URL = `https://wa.me/${WA_NUMBER}`
 

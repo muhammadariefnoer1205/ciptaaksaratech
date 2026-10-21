@@ -14,11 +14,13 @@ export function SectionBadge({ children }) {
   )
 }
 
+import logoImage from '../assets/logo.png'
+
 export function Logo({ size = 'md' }) {
   const box = size === 'md' ? 'w-10 h-10' : 'w-9 h-9'
   return (
     <div className={`${box} rounded-lg bg-surface-container-high border border-outline-variant/50 flex items-center justify-center text-primary-container shadow-inner shrink-0`}>
-      <Icon name="terminal" className="text-[24px]" />
+      <img src={logoImage} alt="Cipta Aksara Tech Logo" className="w-full h-full object-contain" />
     </div>
   )
 }

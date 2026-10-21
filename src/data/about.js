@@ -3,32 +3,32 @@ export const ABOUT_STATS = [
     icon: 'rocket_launch',
     value: '65+',
     valueColor: 'text-on-surface',
-    label: 'Proyek Skala Menengah &amp; Korporat Sukses Diluncurkan di Indonesia &amp; Regional',
+    label: 'Proyek Skala Menengah & Korporat Sukses Diluncurkan di Indonesia & Regional',
   },
   {
     icon: 'speed',
     value: '99.8%',
     valueColor: 'text-primary',
-    label: 'Rata-rata Skor Kinerja Google PageSpeed &amp; Jaminan Uptime SLA 99.9%',
+    label: 'Rata-rata Skor Kinerja Google PageSpeed & Jaminan Uptime SLA 99.9%',
   },
   {
     icon: 'payments',
     value: 'Rp 120M+',
     valueColor: 'text-on-surface',
-    label: 'Total GMV &amp; Transaksi Diproses Melalui Platform Digital Klien Kami',
+    label: 'Total GMV & Transaksi Diproses Melalui Platform Digital Klien Kami',
   },
   {
     icon: 'lock_open',
     value: '100%',
     valueColor: 'text-primary',
-    label: 'Kepemilikan Penuh Kode Sumber Repositori &amp; Zero Vendor Lock-in Sejak Hari Pertama',
+    label: 'Kepemilikan Penuh Kode Sumber Repositori & Zero Vendor Lock-in Sejak Hari Pertama',
   },
 ]
 
 export const TEAM_MEMBERS = [
   {
     name: 'Aryo Daniswara',
-    role: 'Founder &amp; Principal Architect',
+    role: 'Founder & Principal Architect',
     bio: 'Ex-Unicorn Tech Lead dengan 10+ tahun merancang sistem terdistribusi berskala puluhan juta request harian.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDExTjcCeg3fA7gI8T7sXqP7Lqf9Z2BBEdp8L386QGiA7vNv6hIcIp1moxPt9pmDeQRMZHh0CS6FOYi0cmSn9Fn1yMtDA6eIgy7gO9rOe3mFIlErfnpNG1Gnn2-NisgTOXzXOv4oBxkhCw5xnuxCa30eN8lZJ-f76qwnSAkYO9gNZgZr2PLMnEAPBzNEIopi2CUSds2WbLZespry7ZxVA0f5XJSde6C0S_K8fo0B_Ho9Zqrkh0Jzl7Rjw',
     links: [
@@ -38,8 +38,8 @@ export const TEAM_MEMBERS = [
   },
   {
     name: 'Nadia Larasati',
-    role: 'Head of UI/UX &amp; Product Design',
-    bio: 'Spesialis Human-Computer Interaction &amp; Design System architect untuk produk perbankan digital dan SaaS.',
+    role: 'Head of UI/UX & Product Design',
+    bio: 'Spesialis Human-Computer Interaction & Design System architect untuk produk perbankan digital dan SaaS.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCIO4ObHd0oeeTWMv2XnTLuTC9qzqDuOgMt9ilgV74glh4kCDXGWuMZlSEsnvH6fJfzALDzN161PGRY7VmonmPMt8oWqPRNiQJ0IVIyKDKZJ6qRxUgJtCDh9QV9c37GiKupFH8eNYyICv55-Qzkqm9TavlzfvxqwTu4EpcSzP_AyQyQbvudcSf2Kzs2qRojtYPI8DdQpd6Jie71xCtlDl8KpnNp6hZW24-Rco5kPPyVH1MVZRYwVGHY4Q',
     links: [
       { label: 'LinkedIn', icon: 'link', href: '#' },
@@ -58,7 +58,7 @@ export const TEAM_MEMBERS = [
   },
   {
     name: 'Ratna Kusuma',
-    role: 'Senior Frontend &amp; Performance',
+    role: 'Senior Frontend & Performance',
     bio: 'Web Vitals champion, micro-interactions master, serta advokat aksesibilitas WCAG 2.1 AAA.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDDhyDnOdRPDZ5UH2T563fGESw7ix6tR1Y3W3wjr3Mwlx5xk8-HXOEgtd9SC2aBtBN474edKR5DHCJf06bV8oQZ99J0HDIr7ZbaM78_re_6_ynjWgIMg7NJEAIifBd6JuVuf5w4-jUuwGJwzzwQyWbyPBrnLUqarfM55M843c7yYswBT5Zf4nScsMqB-tikIHlSEMxcU9dZgRZI0Jjgp0gbkVEiwt2A737Hms7cSR9Uhjd91NhLkD0D-w',
     links: [
@@ -68,7 +68,7 @@ export const TEAM_MEMBERS = [
   },
   {
     name: 'Fajar Ramadhan',
-    role: 'DevOps &amp; Security Lead',
+    role: 'DevOps & Security Lead',
     bio: 'Arsitek Cloud Infrastructure, otomatisasi CI/CD zero-downtime, serta pengawasan kepatuhan ISO 27001.',
     image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA1-IIIZyW9FHNPcBiHbmNaTBceLUnm2qrc-qhYBLIk-J630t7pzKX_Cz2uVV2QrB1ugpbR7jYDIR9vkF6VIsbVOMJO195mBkztD6FHrTq-O8c1Mfn3ih4adsdoREYHGzvBLO4Y4OoDAuHi9_CZzUOfCi1vy9hiZzZJxg684vtNNwFFUyL-yOeDg2uMgQk6UdrRNsFScTVZvr6OMmFiCRsaULWHDlREdA5AeOeX8wutDPTbR5SSHQxuMw',
     links: [
@@ -167,7 +167,7 @@ export const COMPANY_VALUES = [
 export const MILESTONES = [
   {
     label: 'Framework Inti',
-    value: 'Next.js 15 &amp; Node',
+    value: 'Next.js 15 & Node',
     valueColor: 'text-primary',
     width: 'w-[96%]',
     barColor: 'bg-primary',

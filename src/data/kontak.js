@@ -122,7 +122,7 @@ export const KONTACT_QUICK_ACTION = {
   desc:
     'Hubungi Principal Engineer kami langsung via WhatsApp untuk diskusi teknis real-time, audit ringkas, atau konsultasi tender.',
   button: 'Chat Langsung via WhatsApp',
-  url: 'https://wa.me/6281198765432',
+  url: 'https://wa.me/6285179980594',
 }
 
 export const KONTACT_DETAILS = {
