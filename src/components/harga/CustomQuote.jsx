@@ -12,7 +12,7 @@ export default function CustomQuote() {
         <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
           <div className="max-w-2xl text-center lg:text-left">
             <span className="px-3.5 py-1 rounded-full text-label-sm font-label-sm bg-primary/20 text-primary border border-primary/30 inline-block mb-3">
-              Konsultasi Teknis &amp; Arsitektur
+              Konsultasi Teknis & Arsitektur
             </span>
             <h2 className="text-headline-md md:text-headline-lg font-headline-lg text-on-surface mb-3 tracking-tight">
               Punya Kebutuhan Spesifik atau Proyek Skala Besar?
@@ -22,7 +22,7 @@ export default function CustomQuote() {
             </p>
             <div className="flex items-center justify-center lg:justify-start gap-2 text-label-md font-label-md text-primary">
               <Icon name="timer" className="text-base" />
-              <span>Respon instan dalam waktu &lt; 15 menit pada jam kerja (09.00 - 18.00 WIB)</span>
+              <span>Respon instan dalam waktu {'<'} 15 menit pada jam kerja (09.00 - 18.00 WIB)</span>
             </div>
           </div>
           <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-4 w-full lg:w-auto shrink-0">

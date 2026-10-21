@@ -29,7 +29,7 @@ export default function LayananCta() {
             </a>
           </div>
           <p className="text-body-sm font-body-sm text-on-surface-variant/70 mt-6">
-            Respons instan dalam waktu &lt; 15 menit pada jam kerja (09.00 - 18.00 WIB)
+            Respons instan dalam waktu {'<'} 15 menit pada jam kerja (09.00 - 18.00 WIB)
           </p>
         </div>
       </div>

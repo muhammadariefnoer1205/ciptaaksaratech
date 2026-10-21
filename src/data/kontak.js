@@ -1,6 +1,6 @@
 export const KONTACT_HERO = {
   breadcrumb: [{ label: 'Beranda', to: '/' }, { label: 'Kontak & Konsultasi', current: true }],
-  badge: 'Respon Cepat &lt; 15 Menit Jam Kerja • Non-Disclosure Agreement (NDA) Tersedia',
+  badge: 'Respon Cepat < 15 Menit Jam Kerja • Non-Disclosure Agreement (NDA) Tersedia',
   headline: 'Mari Diskusikan Arsitektur Digital & Proyek Perangkat Lunak Anda',
   subheadline:
     'Ceritakan tantangan bisnis dan visi teknis Anda. Tim Principal Engineer dan UI/UX Solution Architect kami siap memberikan estimasi, rencana arsitektur (RAB), dan konsultasi teknis tanpa komitmen awal.',
@@ -89,10 +89,10 @@ export const KONTACT_FORM = {
       required: true,
       options: [
         { label: 'Pilih Kisaran Anggaran', value: '' },
-        { label: '&lt; Rp 10 Juta (Proyek Skala Kecil)', value: 'small' },
+        { label: '< Rp 10 Juta (Proyek Skala Kecil)', value: 'small' },
         { label: 'Rp 10 - 25 Juta (Paket Bisnis Pro)', value: 'medium' },
         { label: 'Rp 25 - 50 Juta (Aplikasi Web & E-Commerce)', value: 'growth', selected: true },
-        { label: '&gt; Rp 50 Juta (Solusi Kustom Enterprise / SaaS)', value: 'enterprise' },
+        { label: '> Rp 50 Juta (Solusi Kustom Enterprise / SaaS)', value: 'enterprise' },
       ],
     },
   ],
@@ -108,11 +108,11 @@ export const KONTACT_FORM = {
     label: 'File Brief / Dokumen Spesifikasi Tambahan',
     optional: '(Opsional)',
     text: 'Unggah dokumen brief / RFP (PDF, DOCX maks. 10MB)',
-    hint: 'Tarik &amp; lepas dokumen di sini atau telusuri file',
+    hint: 'Tarik & lepas dokumen di sini atau telusuri file',
   },
   privacy:
     'Saya menyetujui Kebijakan Privasi dan mengizinkan CIPTA AKSARA TECH menghubungi saya mengenai penawaran ini.',
-  submit: 'Kirim Permintaan Konsultasi &amp; RAB',
+  submit: 'Kirim Permintaan Konsultasi & RAB',
   tls: '🔒 Data Anda dilindungi oleh enkripsi TLS 1.3 standar keamanan industri.',
 }
 export const KONTACT_QUICK_ACTION = {
@@ -135,7 +135,7 @@ export const KONTACT_DETAILS = {
     secondaryLabel: '(Pengadaan / RFP)',
   },
   phone: {
-    label: 'Telepon Kantor &amp; Hotline',
+    label: 'Telepon Kantor & Hotline',
     hunting: '+62 21 5088 9200 (Hunting)',
     wa: '+62 811 9876 5432 (WhatsApp Dedicated)',
   },
@@ -171,7 +171,7 @@ export const KONTACT_COMMITMENT = [
   {
     icon: 'speed',
     filled: true,
-    big: '&lt; 15 Menit',
+    big: '< 15 Menit',
     small: 'SLA Respon Kilat',
   },
   {

@@ -28,7 +28,7 @@ export default function PortofolioCta() {
         </div>
         <div className="flex items-center justify-center gap-2 text-label-sm font-label-sm text-outline">
           <Icon name="bolt" className="text-primary text-xs" />
-          Respons instan dalam waktu &lt; 15 menit pada jam operasional.
+          Respons instan dalam waktu {'<'} 15 menit pada jam operasional.
         </div>
       </div>
     </section>

@@ -31,7 +31,7 @@ export default function FinalCta() {
           <div className="pt-6 flex flex-wrap items-center justify-center gap-6 text-on-surface-variant font-label-sm text-label-sm">
             <span className="flex items-center gap-1.5">
               <span className="material-symbols-outlined text-primary text-base fill-icon">timer</span>
-              Respon Cepat &lt; 2 Jam Kerja
+              Respon Cepat {'<'} 2 Jam Kerja
             </span>
             <span className="flex items-center gap-1.5">
               <span className="material-symbols-outlined text-primary text-base fill-icon">description</span>
