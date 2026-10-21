@@ -7,6 +7,7 @@ import LayananPage from './pages/LayananPage.jsx'
 import PortofolioPage from './pages/PortofolioPage.jsx'
 import HargaPage from './pages/HargaPage.jsx'
 import TentangPage from './pages/TentangPage.jsx'
+import KontakPage from './pages/KontakPage.jsx'
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
           }
         />
         <Route path="/tentang" element={<TentangPage />} />
+        <Route path="/kontak" element={<KontakPage />} />
         <Route path="/layanan" element={<LayananPage />} />
         <Route path="/portofolio" element={<PortofolioPage />} />
         <Route path="/paket-harga" element={<HargaPage />} />

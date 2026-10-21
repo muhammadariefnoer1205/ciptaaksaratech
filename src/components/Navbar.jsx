@@ -10,7 +10,7 @@ export function scrollToId(id) {
   })
 }
 
-const ROUTES = ['/tentang', '/layanan', '/portofolio', '/paket-harga']
+const ROUTES = ['/tentang', '/layanan', '/portofolio', '/paket-harga', '/kontak']
 
 export default function Navbar() {
   const [open, setOpen] = useState(false)

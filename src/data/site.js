@@ -8,7 +8,7 @@ export const NAV_LINKS = [
   { label: 'Portofolio', to: '/portofolio' },
   { label: 'Paket Harga', to: '/paket-harga' },
   { label: 'Tentang', to: '/tentang' },
-  { label: 'Kontak', to: '/', hash: '#kontak', section: 'kontak' }
+  { label: 'Kontak', to: '/kontak' }
 ]
 
 export const CLIENTS = [

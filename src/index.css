@@ -49,6 +49,13 @@ details summary::-webkit-details-marker {
   box-shadow: 0 0 16px rgba(183, 216, 148, 0.12);
 }
 
+/* Kontak page aesthetics (glass form card, from original design) */
+.custom-glass {
+  background: rgba(21, 28, 40, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
 /* Paket Harga page aesthetics (glass + glow, from original design) */
 .glass-card {
   background: rgba(35, 42, 55, 0.75);
